@@ -1,0 +1,11 @@
+(
+    id: "basic_compressor_air",
+    instructions: (
+        inputs: Some([
+            ("gray_matter", 20),
+        ]),
+        output: [
+            ("air", 4),
+        ],
+    ),
+)

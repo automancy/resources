@@ -1,0 +1,12 @@
+(
+    id: "basic_compressor_water",
+    instructions: (
+        inputs: Some([
+            ("gray_matter", 4),
+            ("blue_matter", 16),
+        ]),
+        output: [
+            ("water", 4),
+        ],
+    ),
+)

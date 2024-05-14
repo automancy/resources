@@ -1,0 +1,12 @@
+(
+    id: "basic_furnace_brown",
+    instructions: (
+        inputs: Some([
+            ("red_matter", 4),
+            ("green_matter", 16),
+        ]),
+        output: [
+            ("brown_matter", 16),
+        ],
+    ),
+)

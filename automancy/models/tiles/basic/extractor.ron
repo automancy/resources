@@ -1,0 +1,4 @@
+(
+    id: "tile/basic_extractor",
+    file: "extractor.glb",
+)

@@ -1,0 +1,4 @@
+(
+    id: "tile/basic_sorter",
+    file: "sorter.glb",
+)

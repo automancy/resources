@@ -1,0 +1,11 @@
+(
+    id: "white_mechwork",
+    instructions: (
+        inputs: Some([
+            ("white_matter", 8),
+        ]),
+        output: [
+            ("white_mechwork", 1),
+        ],
+    ),
+)

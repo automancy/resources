@@ -1,0 +1,12 @@
+(
+    id: "basic_extractor",
+    function: Some("machine"),
+    model: "tile/basic_extractor",
+    data: ({
+        "category": Id("basic_producer"),
+        "scripts": VecId([
+            "white_matter",
+        ]),
+        "default_tile": Bool(true),
+    }),
+)

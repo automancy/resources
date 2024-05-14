@@ -1,0 +1,9 @@
+(
+    id: "none",
+    function: None,
+    model: "tile/none",
+    data: ({
+        "default_tile": Bool(true),
+        "indirectional": Bool(true),
+    }),
+)

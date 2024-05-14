@@ -1,0 +1,12 @@
+(
+    id: "basic_mixer_purple_goo",
+    instructions: (
+        inputs: Some([
+            ("blue_matter", 8),
+            ("red_matter", 8),
+        ]),
+        output: [
+            ("purple_goo", 8),
+        ],
+    ),
+)

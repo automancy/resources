@@ -1,0 +1,14 @@
+(
+    id: "basic_compressor",
+    icon: "tile/basic_compressor",
+    icon_mode: Tile,
+    unlocks: ["basic_compressor"],
+    depends_on: Some("basic_sorter"),
+    name: "basic_compressor_name",
+    description: "basic_compressor_desc",
+    completed_description: "basic_compressor_done",
+    required_items: Some([
+        ("gray_matter", 64),
+    ]),
+    attached_puzzle: None,
+)

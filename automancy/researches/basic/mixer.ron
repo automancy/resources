@@ -1,0 +1,14 @@
+(
+    id: "basic_mixer",
+    icon: "tile/basic_mixer",
+    icon_mode: Tile,
+    unlocks: ["basic_mixer"],
+    depends_on: Some("basic_sorter"),
+    name: "basic_mixer_name",
+    description: "basic_mixer_desc",
+    completed_description: "basic_mixer_done",
+    required_items: Some([
+        ("blue_matter", 64),
+    ]),
+    attached_puzzle: None,
+)

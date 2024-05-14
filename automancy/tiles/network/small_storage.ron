@@ -1,0 +1,12 @@
+(
+    id: "small_storage",
+    function: Some("storage"),
+    model: "tile/small_storage",
+    data: ({
+        "category": Id("network"),
+        "item_type": Id("#any"),
+        "storage_takeable": Bool(true),
+        "indirectional": Bool(true),
+        "default_tile": Bool(true)
+    }),
+)

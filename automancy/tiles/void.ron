@@ -1,0 +1,10 @@
+(
+    id: "void",
+    function: Some("void"),
+    model: "tile/void",
+    data: ({
+        "category": Id("utility"),
+        "indirectional": Bool(true),
+        "default_tile": Bool(true),
+    }),
+)

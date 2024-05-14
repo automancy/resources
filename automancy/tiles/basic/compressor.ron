@@ -1,0 +1,15 @@
+(
+    id: "basic_compressor",
+    function: Some("machine"),
+    model: "tile/basic_compressor",
+    data: ({
+        "category": Id("basic_processor"),
+        "scripts": VecId([
+            "basic_compressor_fire",
+            "basic_compressor_water",
+            "basic_compressor_air",
+            "basic_compressor_earth",
+            "basic_compressor_order",
+        ]),
+    }),
+)

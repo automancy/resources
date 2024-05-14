@@ -1,0 +1,31 @@
+(
+    id: "basic_prism",
+    icon: "tile/basic_prism",
+    icon_mode: Tile,
+    unlocks: ["basic_prism"],
+    depends_on: Some("basic_assembler"),
+    name: "basic_prism_name",
+    description: "basic_prism_desc",
+    completed_description: "basic_prism_done",
+    required_items: Some([
+        ("white_mechwork", 16),
+    ]),
+    attached_puzzle: Some(("puzzles/connection_puzzle", ({
+        "anchors": TileMapOffsetCoord([
+            ((0, 0), "red_matter"),
+            ((0, 2), "green_matter"),
+            ((2, 1), "blue_matter")
+        ]),
+        "selections": VecId([
+            "red_matter",
+            "green_matter",
+            "blue_matter",
+            "white_matter",
+        ]),
+        "connections": MapSetId([
+            ("red_matter", ["white_matter"]),
+            ("green_matter", ["white_matter"]),
+            ("blue_matter", ["white_matter"]),
+        ])
+    }))),
+)
