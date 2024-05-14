@@ -1,4 +1,4 @@
-# The resources:tm: for automancy!
+# The resources™ for automancy!
 
 See [automancy](https://github.com/automancy/automancy) for the actual code of the game.
 
