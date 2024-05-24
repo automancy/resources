@@ -1,5 +1,6 @@
 struct Uniform {
     light_color: vec4<f32>,
+    camera_matrix: mat4x4<f32>,
 }
 
 struct MatrixData {
@@ -50,7 +51,7 @@ fn vs_main(
     let model_pos = model_matrix * vec4(in.pos, 1.0);
 
     out.model_pos = model_pos.xyz / model_pos.w;
-    out.pos = world_matrix * model_pos;
+    out.pos = world_matrix * ubo.camera_matrix * model_pos;
     out.normal = normalize(normal_matrix * in.normal);
 
     out.color = vec4(mix(instance.color_offset.rgb, in.color.rgb, in.color.a - instance.color_offset.a), instance.alpha * in.color.a);
