@@ -13,8 +13,11 @@ var model_texture: texture_2d<f32>;
 @group(0) @binding(6)
 var noise_texture: texture_2d<f32>;
 
+const FLAG_SCREEN_EFFECT: u32 = 1;
+
 struct Uniform {
     world_matrix: mat4x4<f32>,
+    flags: vec4<u32>,
 }
 
 @group(1) @binding(0)
@@ -95,10 +98,13 @@ fn fs_main(in: VertexOutput) -> @location(0) vec4<f32> {
     let distance_vector = in.uv - vec2(0.5);
     let distance = dot(distance_vector, distance_vector);
     let offset_strength = 0.005 * smoothstep(0.0, 1.0, distance);
-    let edge_darken = smoothstep(0.0, 1.0, (1.0 - distance)) * 0.5;
 
     let color = textureSample(frame_texture, filtering_sampler, in.uv);
-    let chroma_abbr = vec4(
+
+    let screen_effect_enabled = f32((ubo.flags.x & FLAG_SCREEN_EFFECT) != 0);
+
+    let edge_darken = (1.0 - screen_effect_enabled) + screen_effect_enabled * smoothstep(0.0, 1.0, (1.0 - distance)) * 0.5;
+    let chroma_abbr = screen_effect_enabled * vec4(
         textureSample(frame_texture, filtering_sampler, in.uv + vec2<f32>(offset_strength, -offset_strength)).r,
         textureSample(frame_texture, filtering_sampler, in.uv + vec2<f32>(-offset_strength, 0.0)).g,
         textureSample(frame_texture, filtering_sampler, in.uv + vec2<f32>(0.0, offset_strength)).b,

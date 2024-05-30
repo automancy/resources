@@ -1,7 +1,14 @@
+struct Uniform {
+    viewport_size: vec2<f32>,
+    viewport_pos: vec2<f32>,
+}
+
 @group(0) @binding(0)
 var frame_texture: texture_2d<f32>;
 @group(0) @binding(1)
 var frame_sampler: sampler;
+@group(0) @binding(2)
+var<uniform> ubo: Uniform;
 
 struct VertexInput {
     @builtin(vertex_index) idx: u32,
@@ -23,8 +30,10 @@ fn vs_main(
         f32(in.idx & 2u)
     );
 
-    out.pos = vec4(uv * 2.0 - 1.0, 0.0, 1.0);
-    out.uv = vec2(uv.x, 1.0 - uv.y);
+    let pos = uv * 2.0 - 1.0;
+    out.pos = vec4(pos.x, -pos.y, 0.0, 1.0);
+
+    out.uv = (ubo.viewport_pos + uv * ubo.viewport_size);
 
     return out;
 }
