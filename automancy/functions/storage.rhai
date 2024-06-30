@@ -67,7 +67,11 @@ fn handle_extract_request(input) {
 fn tile_config(input) {
     let ui = [];
 
-    ui.push([TileConfig::AMOUNT, CAPACITY, CAPACITY_LABEL, 65536]);
+    ui.push([Ui::Row, [
+        [Ui::Label, CAPACITY_LABEL],
+        [Ui::LabelAmount, this[CAPACITY]],
+    ]]);
+    ui.push([Ui::SliderAmount, CAPACITY, 65536]);
 
     return ui;
 }
