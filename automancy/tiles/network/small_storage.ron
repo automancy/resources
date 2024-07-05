@@ -4,9 +4,9 @@
     model: "tile/small_storage",
     data: ({
         "category": Id("network"),
-        "item_type": Id("#any"),
+        "item_type": Id("core:#any"),
         "storage_takeable": Bool(true),
         "indirectional": Bool(true),
-        "default_tile": Bool(true)
+        "default_tile": Bool(true),
     }),
 )

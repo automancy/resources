@@ -4,7 +4,7 @@
     model: "tile/basic_sorter",
     data: ({
         "category": Id("transfer"),
-        "item_type": Id("#any"),
+        "item_type": Id("core:#any"),
         "direction_color": Color("98ffa0"),
     }),
 )

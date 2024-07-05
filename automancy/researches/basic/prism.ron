@@ -1,6 +1,6 @@
 (
     id: "basic_prism",
-    icon: "tile/basic_prism",
+    icon: "basic_prism",
     icon_mode: Tile,
     unlocks: ["basic_prism"],
     depends_on: Some("basic_assembler"),

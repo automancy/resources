@@ -1,101 +1,87 @@
 fn id_deps() {
-    [
-        ["buffer", "BUFFER"],
-        ["script", "SCRIPT"],
-        ["direction", "DIRECTION"],
-    ]
+  [["buffer", "BUFFER"], ["script", "SCRIPT"], ["direction", "DIRECTION"]]
 }
 
 fn function_id() {
-    "machine"
+  "machine"
 }
 
 fn handle_tick(input) {
-    let direction = this[DIRECTION];
+  let direction = this[DIRECTION];
 
-    if direction == () {
-        return;
+  if direction == () {
+    return;
+  }
+  let coord = input.coord + direction;
+
+  let script = this[SCRIPT]?.as_script();
+  if script == () {
+    return;
+  }
+  let outputs = script.instructions.outputs;
+  let inputs = script.instructions.inputs;
+
+  if inputs == () {
+    return Result::MakeTransaction(coord, input.id, input.coord, outputs);
+  }
+  let buffer = this[BUFFER];
+  if buffer == () {
+    return;
+  }
+  for input in inputs {
+    let stored = buffer[input.id];
+
+    if stored < input.amount {
+      return;
     }
+  }
 
-    let coord = input.coord + direction;
-
-    let script = this[SCRIPT]?.as_script();
-    if script == () {
-        return;
-    }
-
-    let outputs = script.instructions.outputs;
-    let inputs = script.instructions.inputs;
-
-    if inputs == () {
-        return [Result::MAKE_TRANSACTION, coord, input.id, input.coord, outputs];
-    }
-
-    let buffer = this[BUFFER];
-    if buffer == () {
-        return;
-    }
-
-    for input in inputs {
-        let stored = buffer[input.item];
-
-        if stored < input.amount {
-            return;
-        }
-    }
-
-    [Result::MAKE_TRANSACTION, coord, input.id, input.coord, outputs]
+  return Result::MakeTransaction(coord, input.id, input.coord, outputs);
 }
 
 fn handle_transaction(input) {
-    let inputs = this[SCRIPT]?.as_script()?.instructions?.inputs;
-    if inputs == () {
-        return;
-    }
+  let inputs = this[SCRIPT]?.as_script()?.instructions?.inputs;
+  if inputs == () {
+    return;
+  }
 
-    let matched = item_matches(input.stack.item.id, inputs);
-    if matched == () {
-        return;
-    }
+  let matched = item_stack_matches(input.stack.id, inputs);
+  if matched == () {
+    return;
+  }
 
-    let buffer = this.get_or_new_inventory(BUFFER);
-    
-    let amount = matched.amount * 8;
-    let stored = buffer[input.stack.item];
-    if stored >= amount {
-        return;
-    }
-    let inserting = min(input.stack.amount, amount - stored);
+  let buffer = this.get_or_new_inventory(BUFFER);
 
-    buffer[input.stack.item] = stored + inserting;
+  let amount = matched.amount * 8;
+  let stored = buffer[input.stack.id];
+  if stored >= amount {
+    return;
+  }
+  let inserting = min(input.stack.amount, amount - stored);
 
-    this[BUFFER] = buffer;
+  buffer[input.stack.id] = stored + inserting;
 
-    return [TransResult::CONSUME, inserting]
+  this[BUFFER] = buffer;
+
+  return TransResult::Consume(ItemStack(inserting, input.stack.id), input.source_coord, input.root_coord);
 }
 
 fn handle_transaction_result(input) {
-    let inputs = this[SCRIPT]?.as_script()?.instructions?.inputs;
-    let buffer = this[BUFFER];
+  let inputs = this[SCRIPT]?.as_script()?.instructions?.inputs;
+  let buffer = this[BUFFER];
 
-    if inputs != () && buffer != () {
-        for input in inputs {
-            let stored = buffer[input.item];
+  if inputs != () && buffer != () {
+    for input in inputs {
+      let stored = buffer[input.id];
 
-            if stored < input.amount {
-                stored = 0;
-                throw "in transaction result: tile does not have enough input for the supposed output!";
-            } else {
-                buffer[input.item] = stored - input.amount;
-            }
-        }
-
-        this[BUFFER] = buffer;
+      if stored < input.amount {
+        stored = 0;
+        throw "in transaction result: tile does not have enough input for the supposed output!";
+      } else {
+        buffer[input.id] = stored - input.amount;
+      }
     }
-}
 
-fn tile_config(input) {
-    let ui = [];
-
-    return ui;
+    this[BUFFER] = buffer;
+  }
 }

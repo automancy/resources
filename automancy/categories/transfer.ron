@@ -1,5 +1,5 @@
 (
     id: "transfer",
     ord: -1000,
-    icon: "tile/basic_sorter",
+    icon: "basic_sorter",
 )

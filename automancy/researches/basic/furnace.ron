@@ -1,6 +1,6 @@
 (
     id: "basic_furnace",
-    icon: "tile/basic_furnace",
+    icon: "basic_furnace",
     icon_mode: Tile,
     unlocks: ["basic_furnace"],
     depends_on: Some("basic_sorter"),

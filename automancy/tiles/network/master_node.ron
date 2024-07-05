@@ -6,5 +6,6 @@
         "category": Id("network"),
         "direction_color": Color("ff955e"),
         "linking": Bool(true),
+        "default_tile": Bool(true),
     }),
 )

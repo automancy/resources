@@ -1,6 +1,6 @@
 (
     id: "basic_compressor",
-    icon: "tile/basic_compressor",
+    icon: "basic_compressor",
     icon_mode: Tile,
     unlocks: ["basic_compressor"],
     depends_on: Some("basic_sorter"),

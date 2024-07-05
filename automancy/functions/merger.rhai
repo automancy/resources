@@ -1,17 +1,15 @@
 fn id_deps() {
-    [
-        ["direction", "DIRECTION"],
-    ]
+  [["direction", "DIRECTION"]]
 }
 
 fn function_id() {
-    "merger"
+  "merger"
 }
 
 fn handle_transaction(input) {
-    let direction = this[DIRECTION];
-    
-    if direction != () {
-        return [TransResult::PASS_ON, input.coord + direction];
-    }
+  let direction = this[DIRECTION];
+
+  if direction != () {
+    return TransResult::PassOn(input.coord + direction, input.stack, input.source_coord, input.root_coord, input.root_id);
+  }
 }

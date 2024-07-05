@@ -1,6 +1,6 @@
 (
     id: "basic_sorter",
-    icon: "tile/basic_sorter",
+    icon: "basic_sorter",
     icon_mode: Tile,
     unlocks: ["basic_sorter"],
     depends_on: Some("basic_prism"),

@@ -1,6 +1,4 @@
 (
-    none: "<none>",
-    unnamed: "<unnamed, report to the devs>",
     items: {
         "white_matter": "White Matter",
         "white_mechwork": "White Mechwork",
@@ -20,7 +18,6 @@
         "network_assembly": "Networking Assembly",
     },
     tiles: {
-        "none": "None",
         "node": "Node",
         "master_node": "Master Node",
         "merger": "Merger",
@@ -139,9 +136,5 @@
         "cut": "Cut",
         "copy": "Copy",
         "paste": "Paste",
-    },
-    error: {
-        "unwritable_options": "Could not write the options.ron file! Your changes will NOT be saved.",
-        "invalid_map_data": "Map {} was corrupted and could not be repaired! This session will instead be written to {}",
     },
 )

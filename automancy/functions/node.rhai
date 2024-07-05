@@ -1,26 +1,28 @@
 fn id_deps() {
-    [
-        ["direction", "DIRECTION"],
-        ["link", "LINK"],
-    ]
+  [["direction", "DIRECTION"], ["link", "LINK"]]
 }
 
 fn function_id() {
-    "node"
+  "node"
 }
 
 fn handle_tick(input) {
-    let link = this[LINK];
+  let link = this[LINK];
 
-    if link != () {
-        return [Result::MAKE_EXTRACT_REQUEST, link, input.id, input.coord];
-    }
+  if link != () {
+    return Result::MakeExtractRequest(
+      link, 
+      input.id,
+      input.coord,
+      OnFailAction::RemoveData(LINK),
+    );
+  }
 }
 
 fn handle_transaction(input) {
-    let direction = this[DIRECTION];
+  let direction = this[DIRECTION];
 
-    if direction != () {
-        return [TransResult::PASS_ON, input.coord + direction];
-    }
+  if direction != () {
+    return TransResult::PassOn(input.coord + direction, input.stack, input.source_coord, input.root_coord, input.root_id);
+  }
 }
