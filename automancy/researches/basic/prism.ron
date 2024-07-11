@@ -12,20 +12,20 @@
     ]),
     attached_puzzle: Some(("puzzles/connection_puzzle", ({
         "anchors": TileMapOffsetCoord([
-            ((0, 0), "red_matter"),
-            ((0, 2), "green_matter"),
-            ((2, 1), "blue_matter")
+            ((0, 0), "item/red_matter"),
+            ((0, 2), "item/green_matter"),
+            ((2, 1), "item/blue_matter")
         ]),
         "selections": VecId([
-            "red_matter",
-            "green_matter",
-            "blue_matter",
-            "white_matter",
+            "item/red_matter",
+            "item/green_matter",
+            "item/blue_matter",
+            "item/white_matter",
         ]),
         "connections": MapSetId([
-            ("red_matter", ["white_matter"]),
-            ("green_matter", ["white_matter"]),
-            ("blue_matter", ["white_matter"]),
+            ("item/red_matter", ["item/white_matter"]),
+            ("item/green_matter", ["item/white_matter"]),
+            ("item/blue_matter", ["item/white_matter"]),
         ])
     }))),
 )

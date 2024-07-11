@@ -88,6 +88,12 @@
         "inventory": "Inventory:",
         "tile_config": "Config",
 
+        "options_graphics": "Graphics",
+        "options_audio": "Audio",
+        "options_gui": "GUI",
+        "options_controls": "Controls",
+
+
         "inventory_tip": "Click on the items in the inventory to collect them into your own!",
         "search_tip": "Filter with name...",
         "search_script_tip": "Filter with Script name...",
@@ -101,7 +107,7 @@
         "tile_config_capacity": "Storage Capacity:",
         "tile_config_direction": "Direction:",
 
-        "lbl_maps_loaded": "{} maps loaded",
+        "lbl_maps_loaded": "{maps_number} maps loaded",
         "lbl_delete_map_confirm": "This will permanently delete this map. Are you sure?",
         "lbl_pick_another_name": "Please pick another name.",
         "lbl_cannot_place_missing_item": "You need one '{}' item in order to place this tile",

@@ -63,7 +63,6 @@ fn handle_extract_request(input) {
 
 fn tile_config(input) {
   return Ui::Col([
-    Ui::Row([Ui::Label(CAPACITY_LABEL), Ui::LabelAmount(this[CAPACITY] ?? 0)]),
-    Ui::SliderAmount(CAPACITY, 65536),
+    Ui::Row([Ui::Label(CAPACITY_LABEL), Ui::InputAmount(CAPACITY, 65536)]),
   ]);
 }

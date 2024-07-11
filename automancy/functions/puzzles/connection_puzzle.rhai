@@ -36,11 +36,11 @@ fn pre_setup(setup) {
 
 fn selection_at_coord(setup, coord) {
     if coord !in this[BOUNDS] {
-        return;
+        return [];
     }
 
     if coord in setup[ANCHORS].keys() {
-        return;
+        return [];
     }
 
     return setup[SELECTIONS];
