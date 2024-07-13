@@ -1,5 +1,22 @@
 fn id_deps() {
-  [["buffer", "BUFFER"], ["script", "SCRIPT"], ["direction", "DIRECTION"]]
+  [
+    ["buffer", "BUFFER"],
+    ["script", "SCRIPT"],
+    ["scripts", "SCRIPTS"],
+    ["direction", "DIRECTION"],
+    
+    ["tile_config_direction", "DIRECTION_LABEL"],
+    ["tip_direction", "DIRECTION_TIP"],
+
+    ["tile_config_script", "SCRIPT_LABEL"],
+    ["tip_script", "SCRIPT_TIP"],
+
+    ["tile_config_inventory", "INVENTORY_LABEL"],
+    ["tip_inventory", "INVENTORY_TIP"],
+    ["tile_config_empty_inventory", "EMPTY_INVENTORY_LABEL"],
+
+    ["tip_search_script", "SEARCH_SCRIPT_TIP"],
+  ]
 }
 
 fn function_id() {
@@ -84,4 +101,24 @@ fn handle_transaction_result(input) {
 
     this[BUFFER] = buffer;
   }
+}
+
+fn tile_config(input) {
+  return Ui::Col([
+    Ui::CenterRow([
+      Ui::Label(INVENTORY_LABEL,),
+      Ui::InfoTip(INVENTORY_TIP)
+    ]),
+    Ui::Inventory(BUFFER, EMPTY_INVENTORY_LABEL),
+    Ui::CenterRow([
+      Ui::Label(SCRIPT_LABEL),
+      Ui::InfoTip(SCRIPT_TIP)
+    ]),
+    Ui::SelectableScripts(SCRIPT, SEARCH_SCRIPT_TIP, input.setup[SCRIPTS]),
+    Ui::CenterRow([
+      Ui::Label(DIRECTION_LABEL),
+      Ui::InfoTip(DIRECTION_TIP)
+    ]),
+    Ui::HexDirInput(DIRECTION),
+  ]);
 }

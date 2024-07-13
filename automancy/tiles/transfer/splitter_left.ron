@@ -3,8 +3,7 @@
     function: Some("splitter_left"),
     model: "tile/splitter_left",
     data: ({
-        "category": Id("transfer"),
-        "indirectional": Bool(true),
-        "default_tile": Bool(true),
+        "core:category": Id("transfer"),
+        "core:default_tile": Bool(true),
     }),
 )

@@ -3,9 +3,9 @@
     function: Some("master_node"),
     model: "tile/master_node",
     data: ({
-        "category": Id("network"),
-        "direction_color": Color("ff955e"),
+        "core:category": Id("network"),
+        "core:direction_color": Color("ff955e"),
         "linking": Bool(true),
-        "default_tile": Bool(true),
+        "core:default_tile": Bool(true),
     }),
 )

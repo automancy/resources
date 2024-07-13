@@ -1,5 +1,10 @@
 fn id_deps() {
-  [["direction", "DIRECTION"], ["requested_from_coord", "REQUESTED_FROM_COORD"]]
+  [
+    ["direction", "DIRECTION"],
+    ["requested_from_coord", "REQUESTED_FROM_COORD"],
+    ["tile_config_direction", "DIRECTION_LABEL"],
+    ["tip_direction", "DIRECTION_TIP"],
+  ]
 }
 
 fn function_id() {
@@ -27,4 +32,14 @@ fn handle_extract_request(input) {
       OnFailAction::None(),
     );
   }
+}
+
+fn tile_config(input) {
+  return Ui::Col([
+    Ui::CenterRow([
+      Ui::Label(DIRECTION_LABEL),
+      Ui::InfoTip(DIRECTION_TIP)
+    ]),
+    Ui::HexDirInput(DIRECTION),
+  ]);
 }

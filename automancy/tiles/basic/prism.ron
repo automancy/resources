@@ -3,7 +3,7 @@
     function: Some("machine"),
     model: "tile/basic_prism",
     data: ({
-        "category": Id("basic_processor"),
+        "core:category": Id("basic_processor"),
         "scripts": VecId([
             "basic_prism_white",
         ]),

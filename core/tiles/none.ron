@@ -3,7 +3,6 @@
     function: None,
     model: "tile/none",
     data: ({
-        "automancy:default_tile": Bool(true),
-        "automancy:indirectional": Bool(true),
+        "core:default_tile": Bool(true),
     }),
 )

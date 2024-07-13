@@ -85,7 +85,6 @@
         "invalid_name": "Invalid Name!",
         "create_map": "Create Map",
         "error_popup": "Error",
-        "inventory": "Inventory:",
         "tile_config": "Config",
 
         "options_graphics": "Graphics",
@@ -93,19 +92,22 @@
         "options_gui": "GUI",
         "options_controls": "Controls",
 
+        "tip_inventory": "Click on the items in the inventory to collect them into your own!",
+        "tip_script": "A Script is like a 'recipe' for the Tile to operate on, it specifies what the Tile consumes and what it produces.",
+        "tip_direction": "Which direction the Tile is facing. This means a Connection to another tile, whether it be an 'extraction' source or an 'output' destination.",
+        "tip_link_destination": "Click on the button to start Linking, and then right click a Tile to link to one (of many) Destination.",
 
-        "inventory_tip": "Click on the items in the inventory to collect them into your own!",
-        "search_tip": "Filter with name...",
-        "search_script_tip": "Filter with Script name...",
-        "search_item_tip": "Filter with Item name...",
-        "direction_tip": "Which direction the Tile is facing. This means a Connection to another tile, whether it be an 'extraction' source or an 'output' destination.",
-        "link_destination_tip": "Click on the button to start Linking, and then right click a Tile to link to one (of many) Destination.",
-        
-        "tile_config_script_info": "A Script is like a 'recipe' for the Tile to operate on, it specifies what the Tile consumes and what it produces.",
+        "tip_search": "Filter with name...",
+        "tip_search_script": "Filter with Script name...",
+        "tip_search_item": "Filter with Item name...",
+
+        "tile_config_inventory": "Inventory:",
         "tile_config_script": "Script:",
+        "tile_config_direction": "Direction:",
         "tile_config_item_type": "Item Type:",
         "tile_config_capacity": "Storage Capacity:",
-        "tile_config_direction": "Direction:",
+
+        "tile_config_empty_inventory": "... Empty. :(",
 
         "lbl_maps_loaded": "{maps_number} maps loaded",
         "lbl_delete_map_confirm": "This will permanently delete this map. Are you sure?",

@@ -3,7 +3,7 @@
     function: Some("machine"),
     model: "tile/basic_compressor",
     data: ({
-        "category": Id("basic_processor"),
+        "core:category": Id("basic_processor"),
         "scripts": VecId([
             "basic_compressor_fire",
             "basic_compressor_water",

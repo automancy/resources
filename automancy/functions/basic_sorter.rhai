@@ -1,5 +1,8 @@
 fn id_deps() {
-  [["item", "ITEM"], ["direction", "DIRECTION"]]
+  [
+    ["item", "ITEM"],
+    ["direction", "DIRECTION"]
+  ]
 }
 
 fn function_id() {
@@ -17,4 +20,10 @@ fn handle_transaction(input) {
       return TransResult::PassOn(input.coord + direction.rotate_right(), input.stack, input.source_coord, input.root_coord, input.root_id);
     }
   }
+}
+
+fn tile_config(input) {
+  return Ui::Col([
+    Ui::HexDirInput(DIRECTION),
+  ]);
 }

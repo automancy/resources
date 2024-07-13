@@ -3,8 +3,8 @@
     function: Some("node"),
     model: "tile/node",
     data: ({
-        "category": Id("network"),
+        "core:category": Id("network"),
         "linked": Bool(true),
-        "default_tile": Bool(true),
+        "core:default_tile": Bool(true),
     }),
 )

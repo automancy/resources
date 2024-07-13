@@ -2,8 +2,17 @@ fn id_deps() {
   [
     ["buffer", "BUFFER"],
     ["item", "ITEM"],
+    ["item_type", "ITEM_TYPE"],
     ["capacity", "CAPACITY"],
+
+    ["tile_config_inventory", "INVENTORY_LABEL"],
+    ["tip_inventory", "INVENTORY_TIP"],
+    ["tile_config_empty_inventory", "EMPTY_INVENTORY_LABEL"],
+    
+    ["tile_config_item_type", "ITEM_TYPE_LABEL"],
     ["tile_config_capacity", "CAPACITY_LABEL"],
+
+    ["tip_search_item", "SEARCH_ITEM_TIP"],
   ]
 }
 
@@ -63,6 +72,16 @@ fn handle_extract_request(input) {
 
 fn tile_config(input) {
   return Ui::Col([
-    Ui::Row([Ui::Label(CAPACITY_LABEL), Ui::InputAmount(CAPACITY, 65536)]),
+    Ui::CenterRow([
+      Ui::Label(INVENTORY_LABEL),
+      Ui::InfoTip(INVENTORY_TIP)
+    ]),
+    Ui::Inventory(BUFFER, EMPTY_INVENTORY_LABEL),
+    Ui::Row([
+      Ui::Label(CAPACITY_LABEL),
+      Ui::InputAmount(CAPACITY, 65536)
+    ]),
+    Ui::Label(ITEM_TYPE_LABEL),
+    Ui::SelectableIds(ITEM, SEARCH_ITEM_TIP, item_ids_of_tag(input.setup[ITEM_TYPE])),
   ]);
 }

@@ -1,5 +1,10 @@
 fn id_deps() {
-  [["direction", "DIRECTION"], ["link", "LINK"]]
+  [
+    ["direction", "DIRECTION"],
+    ["link", "LINK"],
+    ["tile_config_direction", "DIRECTION_LABEL"],
+    ["tip_direction", "DIRECTION_TIP"],
+  ]
 }
 
 fn function_id() {
@@ -25,4 +30,14 @@ fn handle_transaction(input) {
   if direction != () {
     return TransResult::PassOn(input.coord + direction, input.stack, input.source_coord, input.root_coord, input.root_id);
   }
+}
+
+fn tile_config(input) {
+  return Ui::Col([
+    Ui::CenterRow([
+      Ui::Label(DIRECTION_LABEL),
+      Ui::InfoTip(DIRECTION_TIP)
+    ]),
+    Ui::HexDirInput(DIRECTION),
+  ]);
 }
