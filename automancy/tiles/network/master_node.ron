@@ -5,7 +5,5 @@
     data: ({
         "core:category": Id("network"),
         "core:direction_color": Color("ff955e"),
-        "linking": Bool(true),
-        "core:default_tile": Bool(true),
     }),
 )

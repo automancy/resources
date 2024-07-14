@@ -2,6 +2,7 @@ fn id_deps() {
   [
     ["direction", "DIRECTION"],
     ["link", "LINK"],
+    
     ["tile_config_direction", "DIRECTION_LABEL"],
     ["tip_direction", "DIRECTION_TIP"],
   ]

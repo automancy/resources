@@ -1,9 +1,14 @@
 fn id_deps() {
   [
     ["direction", "DIRECTION"],
+    ["link", "LINK"],
     ["requested_from_coord", "REQUESTED_FROM_COORD"],
+
     ["tile_config_direction", "DIRECTION_LABEL"],
     ["tip_direction", "DIRECTION_TIP"],
+    ["tile_config_linkage", "LINKAGE_LABEL"],
+    ["tip_linkage", "LINKAGE_TIP"],
+    ["tile_config_link_button", "LINKAGE_BUTTON_TEXT"],
   ]
 }
 
@@ -36,6 +41,11 @@ fn handle_extract_request(input) {
 
 fn tile_config(input) {
   return Ui::Col([
+    Ui::CenterRow([
+      Ui::Label(LINKAGE_LABEL),
+      Ui::InfoTip(LINKAGE_TIP)
+    ]),
+    Ui::Linkage(LINK, LINKAGE_BUTTON_TEXT),
     Ui::CenterRow([
       Ui::Label(DIRECTION_LABEL),
       Ui::InfoTip(DIRECTION_TIP)

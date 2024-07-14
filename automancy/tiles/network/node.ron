@@ -4,7 +4,5 @@
     model: "tile/node",
     data: ({
         "core:category": Id("network"),
-        "linked": Bool(true),
-        "core:default_tile": Bool(true),
     }),
 )

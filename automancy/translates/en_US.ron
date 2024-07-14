@@ -95,7 +95,7 @@
         "tip_inventory": "Click on the items in the inventory to collect them into your own!",
         "tip_script": "A Script is like a 'recipe' for the Tile to operate on, it specifies what the Tile consumes and what it produces.",
         "tip_direction": "Which direction the Tile is facing. This means a Connection to another tile, whether it be an 'extraction' source or an 'output' destination.",
-        "tip_link_destination": "Click on the button to start Linking, and then right click a Tile to link to one (of many) Destination.",
+        "tip_linkage": "Click on the button to start Linking, and then right click a Tile to link to one (of many) Destination.",
 
         "tip_search": "Filter with name...",
         "tip_search_script": "Filter with Script name...",
@@ -104,9 +104,11 @@
         "tile_config_inventory": "Inventory:",
         "tile_config_script": "Script:",
         "tile_config_direction": "Direction:",
+        "tile_config_linkage": "Linkage:",
         "tile_config_item_type": "Item Type:",
         "tile_config_capacity": "Storage Capacity:",
 
+        "tile_config_link_button": "Start linking!",
         "tile_config_empty_inventory": "... Empty. :(",
 
         "lbl_maps_loaded": "{maps_number} maps loaded",
@@ -115,7 +117,6 @@
         "lbl_cannot_place_missing_item": "You need one '{}' item in order to place this tile",
 
         "btn_fedi": "Fedi",
-        "btn_link_network": "Link Network!",
         "btn_confirm": "Ok",
         "btn_exit": "Quit",
         "btn_load": "Load",

@@ -82,6 +82,6 @@ fn tile_config(input) {
       Ui::InputAmount(CAPACITY, 65536)
     ]),
     Ui::Label(ITEM_TYPE_LABEL),
-    Ui::SelectableIds(ITEM, SEARCH_ITEM_TIP, item_ids_of_tag(input.setup[ITEM_TYPE])),
+    Ui::SelectableItems(ITEM, SEARCH_ITEM_TIP, item_ids_of_tag(input.setup[ITEM_TYPE])),
   ]);
 }
