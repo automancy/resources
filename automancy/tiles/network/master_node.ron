@@ -1,9 +1,9 @@
 (
     id: "master_node",
     function: Some("master_node"),
+    category: Some("network"),
     model: "tile/master_node",
     data: ({
-        "core:category": Id("network"),
         "core:direction_color": Color("ff955e"),
     }),
 )

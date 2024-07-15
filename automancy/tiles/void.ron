@@ -1,9 +1,9 @@
 (
     id: "void",
     function: Some("void"),
+    category: Some("utility"),
     model: "tile/void",
     data: ({
-        "core:category": Id("utility"),
         "core:default_tile": Bool(true),
     }),
 )

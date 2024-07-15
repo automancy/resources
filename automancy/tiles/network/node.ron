@@ -1,8 +1,8 @@
 (
     id: "node",
     function: Some("node"),
+    category: Some("network"),
     model: "tile/node",
     data: ({
-        "core:category": Id("network"),
     }),
 )

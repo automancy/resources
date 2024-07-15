@@ -1,9 +1,9 @@
 (
     id: "basic_mixer",
     function: Some("machine"),
+    category: Some("basic_processor"),
     model: "tile/basic_mixer",
     data: ({
-        "core:category": Id("basic_processor"),
         "scripts": VecId([
             "basic_mixer_purple_goo",
             "basic_mixer_lime_goo",

@@ -1,0 +1,10 @@
+(
+    id: "alchemical_assembler",
+    function: Some("machine"),
+    category: Some("alchemy"),
+    model: "tile/alchemical_assembler",
+    data: ({
+        "scripts": VecId([
+        ]),
+    }),
+)

@@ -1,10 +1,10 @@
 (
     id: "small_storage",
     function: Some("storage"),
+    category: Some("network"),
     model: "tile/small_storage",
     data: ({
-        "item_type": Id("core:#any"),
-        "core:category": Id("network"),
         "core:default_tile": Bool(true),
+        "item_type": Id("core:#any"),
     }),
 )

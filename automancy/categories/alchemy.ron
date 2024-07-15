@@ -1,0 +1,6 @@
+(
+    id: "alchemy",
+    ord: 200000,
+    icon: "alchemical_assembler",
+    item: Some("alchemical_assembly"),
+)

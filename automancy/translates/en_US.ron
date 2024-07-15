@@ -16,6 +16,7 @@
         "order": "§Ordo",
         "chaos": "§Perditio",
         "network_assembly": "Networking Assembly",
+        "alchemical_assembly": "Alchemical Assembly",
     },
     tiles: {
         "node": "Node",
@@ -32,10 +33,10 @@
         "basic_mixer": "Basic Mixer",
         "basic_compressor": "Basic Compressor",
         "basic_furnace": "Basic Furnace",
+        "alchemical_assembler": "Alchemical Assembler",
     },
     scripts: {
         "white_matter": "White Matter",
-        "white_mechwork": "White Mechwork",
         "basic_prism_white": "Split White",
         "basic_compressor_air": "Compress -> Aer",
         "basic_compressor_water": "Compress -> Aqua",
@@ -46,13 +47,16 @@
         "basic_furnace_gray": "Burn -> Grey Matter",
         "basic_mixer_purple_goo": "Mix -> Purple Goo",
         "basic_mixer_lime_goo": "Mix -> Lime Goo",
+        "white_mechwork": "White Mechwork",
+        "network_assembly": "Networking Assembly",
+        "alchemical_assembly": "Alchemical Assembly",
     },
     research: {
         "basic_assembler_name": "Colouragy - Basic Assembler",
         "basic_assembler_desc": "You wonder what lies inside those colours, and you wonder how you can utilize them...",
         "basic_assembler_done": "Ah, so these colours are somehow magically malleable... you can combine and shape them to make interesting things- well, more interesting than blobs of colours.",
         "basic_prism_name": "Colouragy - Basic Prism",
-        "basic_prism_desc": "If they're *malleable*, are they *splittable*... Are there intrinsic relationships in colours?",
+        "basic_prism_desc": "If they're *malleable*, are they *separable*... And are there intrinsic relationships in colours?",
         "basic_prism_done": "Mhm, you were correct on this. These colours can be made up of different ones- colours add up 'brighter'- Red, Green and Blue make up the colour White. You wonder if there's other ways to split the colour... this should be enough for now though.",
         "basic_sorter_name": "Logistics - Basic Sorter",
         "basic_sorter_desc": "Machines like the Prism produce multiple items at once. Of course, you can simply only utilize one of them, but...",
@@ -65,14 +69,25 @@
         "basic_compressor_done": "Aha, it seems that with some Grey Matter, you can 'compress' things. These ethereal... materials?- that you can create with this machine- seems to have some greater uses.",
         "basic_mixer_name": "Alchemy - Basic Mixer",
         "basic_mixer_desc": "Blue Matter- seems to dissolve and absort whatever it touches?",
-        "basic_mixer_done": "You... honestly are not quite sure the uses for these gooey stuff. Maybe time will tell. Or if you had fingers, you could probably play with them.",
+        "basic_mixer_done": "You... honestly are not quite sure the use for these gooey stuff. Maybe time will tell... Or if you had fingers, you could probably play with them.",
+        "alchemical_assembler_name": "Alchemy - Alchemical Assembler",
+        "alchemical_assembler_desc": "These... alchemical... elements...? They seem to have more capabilities than the simple colours.",
+        "alchemical_assembler_done": "You've devised a way to create an Alchemical Assembly with your lower-tier Basic Assembler.
+It does need the White Mechwork as a basis, however... You wonder if there'd be other ways to create these mechanism. You'll need these a lot, probably.
+
+Oh, you also found out that you'll need to somehow distribute items across large distances. You've figured out a way to 'link' these special two machines together- the link is not an equal two-way relationship, however.
+
+You've decided to call one of them the 'Master Node' and the other simply 'Node'.
+The Node will send a Request to the master node, and the Master Node will *extract* items from a Storage and then send it back to the Node, and the node will try to send it to its own target.",
     },
     categories: {
-        "basic_producer": "Basic Producer Tiles",
-        "basic_processor": "Basic Processor Tiles",
+        "assembler": "Assemblers",
+        "basic_producer": "Basic Producers",
+        "basic_processor": "Basic Processors",
         "transfer": "Trasnfer Tiles",
         "network": "Network Tiles",
         "utility": "Utility Tiles",
+        "alchemy": "Alchemical Machines",
     },
     gui: {
         "info": "Information",
@@ -114,7 +129,7 @@
         "lbl_maps_loaded": "{maps_number} maps loaded",
         "lbl_delete_map_confirm": "This will permanently delete this map. Are you sure?",
         "lbl_pick_another_name": "Please pick another name.",
-        "lbl_cannot_place_missing_item": "You need one '{}' item in order to place this tile",
+        "lbl_cannot_place_missing_item": "You need one '{item_name}' item in order to place this tile",
 
         "btn_fedi": "Fedi",
         "btn_confirm": "Ok",

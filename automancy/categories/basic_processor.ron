@@ -1,5 +1,5 @@
 (
     id: "basic_processor",
     ord: 100000,
-    icon: "basic_assembler",
+    icon: "basic_prism",
 )

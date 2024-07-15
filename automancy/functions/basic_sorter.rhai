@@ -1,7 +1,12 @@
 fn id_deps() {
   [
     ["item", "ITEM"],
-    ["direction", "DIRECTION"]
+    ["direction", "DIRECTION"],
+    ["item_type", "ITEM_TYPE"],
+
+    ["tile_config_item_type", "ITEM_TYPE_LABEL"],
+
+    ["tip_search_item", "SEARCH_ITEM_TIP"],
   ]
 }
 
@@ -24,6 +29,8 @@ fn handle_transaction(input) {
 
 fn tile_config(input) {
   return Ui::Col([
+    Ui::Label(ITEM_TYPE_LABEL),
+    Ui::SelectableItems(ITEM, SEARCH_ITEM_TIP, item_ids_of_tag(input.setup[ITEM_TYPE])),
     Ui::HexDirInput(DIRECTION),
   ]);
 }

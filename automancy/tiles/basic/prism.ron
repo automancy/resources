@@ -1,9 +1,9 @@
 (
     id: "basic_prism",
     function: Some("machine"),
+    category: Some("basic_processor"),
     model: "tile/basic_prism",
     data: ({
-        "core:category": Id("basic_processor"),
         "scripts": VecId([
             "basic_prism_white",
         ]),

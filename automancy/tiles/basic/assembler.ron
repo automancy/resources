@@ -1,11 +1,13 @@
 (
     id: "basic_assembler",
     function: Some("machine"),
+    category: Some("assembler"),
     model: "tile/basic_assembler",
     data: ({
-        "core:category": Id("basic_processor"),
         "scripts": VecId([
             "white_mechwork",
+            "network_assembly",
+            "alchemical_assembly",
         ]),
     }),
 )

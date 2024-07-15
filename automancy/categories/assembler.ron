@@ -1,0 +1,5 @@
+(
+    id: "assembler",
+    ord: 100,
+    icon: "basic_assembler",
+)
