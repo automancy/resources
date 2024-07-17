@@ -10,8 +10,6 @@ var frame_texture: texture_2d<f32>;
 var normal_texture: texture_2d<f32>;
 @group(0) @binding(5)
 var model_depth_texture: texture_2d<f32>;
-@group(0) @binding(6)
-var noise_texture: texture_2d<f32>;
 
 const FLAG_SCREEN_EFFECT: u32 = 1;
 
@@ -47,9 +45,6 @@ fn vs_main(
 
     return out;
 }
-
-const SSAO_NOISE_SIZE: f32 = 64.0;
-const STEP_COUNT: f32 = 4.0;
 
 fn depth_edge(uv: vec2<f32>) -> vec3<f32> {
     let texture_dim = vec2<f32>(textureDimensions(model_depth_texture));
