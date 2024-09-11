@@ -1,5 +1,5 @@
 (
-    id: "basic_compressor_fire",
+    id: "basic_compressor/fire",
     instructions: (
         inputs: Some([
             ("gray_matter", 4),

@@ -5,9 +5,9 @@
     model: "tile/basic_assembler",
     data: ({
         "scripts": VecId([
-            "white_mechwork",
-            "network_assembly",
-            "alchemical_assembly",
+            "basic_assembler/white_mechwork",
+            "basic_assembler/network_assembly",
+            "basic_assembler/alchemical_assembly",
         ]),
     }),
 )

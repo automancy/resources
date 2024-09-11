@@ -5,8 +5,8 @@
     model: "tile/basic_furnace",
     data: ({
         "scripts": VecId([
-            "basic_furnace_brown",
-            "basic_furnace_gray",
+            "basic_furnace/brown",
+            "basic_furnace/gray",
         ]),
     }),
 )

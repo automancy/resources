@@ -23,9 +23,11 @@
             "item/white_matter",
         ]),
         "connections": MapSetId([
-            ("item/red_matter", ["item/white_matter"]),
-            ("item/green_matter", ["item/white_matter"]),
-            ("item/blue_matter", ["item/white_matter"]),
+            ("item/white_matter", [
+                "item/red_matter", 
+                "item/green_matter", 
+                "item/blue_matter"
+            ]),
         ])
     }))),
 )

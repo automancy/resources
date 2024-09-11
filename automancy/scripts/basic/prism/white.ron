@@ -1,5 +1,5 @@
 (
-    id: "basic_prism_white",
+    id: "basic_prism/white",
     instructions: (
         inputs: Some([
             ("white_matter", 6),

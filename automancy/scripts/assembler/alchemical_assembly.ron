@@ -1,5 +1,5 @@
 (
-    id: "alchemical_assembly",
+    id: "basic_assembler/alchemical_assembly",
     instructions: (
         inputs: Some([
             ("white_mechwork", 4),

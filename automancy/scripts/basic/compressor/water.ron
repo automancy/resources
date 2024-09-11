@@ -1,5 +1,5 @@
 (
-    id: "basic_compressor_water",
+    id: "basic_compressor/water",
     instructions: (
         inputs: Some([
             ("gray_matter", 4),

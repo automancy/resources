@@ -1,0 +1,11 @@
+(
+    id: "alchemical_collector",
+    function: Some("machine"),
+    category: Some("producer"),
+    model: "tile/alchemical_collector",
+    data: ({
+        "scripts": VecId([
+            "alchemical_collector/black_matter",
+        ]),
+    }),
+)

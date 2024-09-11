@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="160cm"
+   height="160cm"
+   viewBox="0 0 160 160"
+   version="1.1"
+   id="svg2"
+   sodipodi:docname="niter_dust.svg"
+   inkscape:version="1.3.2 (091e20ef0f, 2023-11-25, custom)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="namedview2"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="cm"
+     inkscape:zoom="0.020000001"
+     inkscape:cx="-8149.9996"
+     inkscape:cy="14724.999"
+     inkscape:window-width="1870"
+     inkscape:window-height="1052"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g1" />
+  <g
+     id="g1"
+     style="fill:#ff8111;fill-opacity:1"
+     inkscape:label="g1"
+     transform="matrix(1.0355406,0.05778165,-0.02464785,1.1600687,-7.8049081,2.2183163)">
+    <path
+       style="display:inline;fill:#fdfde9;fill-opacity:1;stroke:none;stroke-width:1.85481;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+       d="M 154.97651,104.37082 C 174.24339,103.41115 160.7608,52.919156 138.1263,47.740365 126.07641,44.98334 128.56199,19.712075 85.650783,17.90089 64.004392,16.987243 51.903418,34.939325 35.360701,39.638932 15.516968,45.27632 -2.4378981,112.21144 20.600663,111.06392 Z"
+       id="path1-9"
+       sodipodi:nodetypes="ssssss" />
+    <path
+       id="path1-9-53"
+       style="display:inline;fill:#fbfbd7;fill-opacity:1;stroke:none;stroke-width:1.85481;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+       d="M 60.053255,56.777491 C 44.9729,57.352817 27.965488,62.001149 15.341225,66.528114 7.7601836,87.130324 6.5448839,111.76402 20.600642,111.06392 l 134.375848,-6.6931 c 13.16164,-0.65557 11.03462,-24.420632 1.15327,-41.070152 -19.58521,-0.718864 -51.22941,-1.27082 -84.408378,-6.013309 -3.659544,-0.523082 -7.591262,-0.665404 -11.668127,-0.509868 z" />
+  </g>
+</svg>

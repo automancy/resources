@@ -1,0 +1,4 @@
+(
+    id: "copper_scrap",
+    model: "item/copper_scrap",
+)

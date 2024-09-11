@@ -1,10 +1,11 @@
 (
     id: "alchemical_assembler",
     function: Some("machine"),
-    category: Some("alchemy"),
+    category: Some("assembler"),
     model: "tile/alchemical_assembler",
     data: ({
         "scripts": VecId([
+            "alchemical_assembler/melanose_stone",
         ]),
     }),
 )

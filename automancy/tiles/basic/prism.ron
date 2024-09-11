@@ -5,7 +5,7 @@
     model: "tile/basic_prism",
     data: ({
         "scripts": VecId([
-            "basic_prism_white",
+            "basic_prism/white",
         ]),
     }),
 )

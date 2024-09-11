@@ -1,5 +1,5 @@
 (
-    id: "network_assembly",
+    id: "basic_assembler/network_assembly",
     instructions: (
         inputs: Some([
             ("white_mechwork", 4),

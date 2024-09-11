@@ -1,0 +1,13 @@
+(
+    id: "alchemical_still",
+    function: Some("machine"),
+    category: Some("alchemy"),
+    model: "tile/alchemical_still",
+    data: ({
+        "scripts": VecId([
+            "alchemical_still/aqua_fortis",
+            "alchemical_still/dirt",
+            "alchemical_still/tar",
+        ]),
+    }),
+)

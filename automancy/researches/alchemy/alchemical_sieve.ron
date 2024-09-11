@@ -1,0 +1,15 @@
+(
+    id: "alchemical_sieve",
+    icon: "alchemical_sieve",
+    icon_mode: Tile,
+    unlocks: ["alchemical_sieve"],
+    depends_on: Some("alchemical_assembler"),
+    name: "alchemical_sieve_name",
+    description: "alchemical_sieve_desc",
+    completed_description: "alchemical_sieve_done",
+    required_items: Some([
+        ("alchemical_assembly", 1),
+        ("water", 8),
+    ]),
+    attached_puzzle: None,
+)

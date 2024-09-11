@@ -1,5 +1,5 @@
 (
-    id: "basic_furnace_brown",
+    id: "basic_furnace/brown",
     instructions: (
         inputs: Some([
             ("red_matter", 4),

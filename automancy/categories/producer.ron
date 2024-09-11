@@ -1,5 +1,5 @@
 (
-    id: "basic_producer",
+    id: "producer",
     ord: 1000,
     icon: "basic_extractor",
 )

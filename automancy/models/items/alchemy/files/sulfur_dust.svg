@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="160cm"
+   height="160cm"
+   viewBox="0 0 160 160"
+   version="1.1"
+   id="svg2"
+   sodipodi:docname="sulfur_dust.svg"
+   inkscape:version="1.3.2 (091e20ef0f, 2023-11-25, custom)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="namedview2"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="cm"
+     inkscape:zoom="0.028284273"
+     inkscape:cx="-3005.2036"
+     inkscape:cy="9598.974"
+     inkscape:window-width="1870"
+     inkscape:window-height="1052"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g1" />
+  <g
+     id="g1"
+     style="fill:#ff8111;fill-opacity:1"
+     inkscape:label="g1"
+     transform="matrix(1.0355406,0.05778165,-0.02464785,1.1600687,-7.8049081,2.2183163)">
+    <path
+       style="display:inline;fill:#f0e27c;fill-opacity:1;stroke:none;stroke-width:1.85478;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+       d="M 154.97381,104.37095 C 174.23992,103.41132 160.75782,52.919305 138.12422,47.740468 126.0748,44.98342 128.56026,19.712161 85.650766,17.90089 64.005238,16.987201 51.904765,34.939258 35.362713,39.638832 15.519778,45.27618 -2.4343077,112.21126 20.603332,111.06379 Z"
+       id="path1-9"
+       sodipodi:nodetypes="ssssss" />
+    <path
+       id="path1-9-53"
+       style="display:inline;fill:#ecd244;fill-opacity:1;stroke:none;stroke-width:1.85478;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+       d="m 60.054297,56.777439 c -15.079753,0.575296 -32.086481,5.223594 -44.710236,9.750534 -7.5807182,20.602194 -8.7959459,45.235887 5.25925,44.535817 l 134.370479,-6.69284 c 13.16111,-0.65554 11.03415,-24.420604 1.15318,-41.070143 -19.58443,-0.718903 -51.22736,-1.270922 -84.405011,-6.013476 -3.659399,-0.52309 -7.59096,-0.66542 -11.667662,-0.509892 z" />
+  </g>
+</svg>

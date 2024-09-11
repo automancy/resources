@@ -1,5 +1,5 @@
 (
-    id: "basic_mixer_purple_goo",
+    id: "basic_mixer/purple_goo",
     instructions: (
         inputs: Some([
             ("blue_matter", 8),

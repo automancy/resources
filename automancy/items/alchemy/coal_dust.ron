@@ -1,0 +1,4 @@
+(
+    id: "coal_dust",
+    model: "item/coal_dust",
+)

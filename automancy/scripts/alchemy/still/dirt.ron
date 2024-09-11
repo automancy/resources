@@ -1,0 +1,12 @@
+(
+    id: "alchemical_still/dirt",
+    instructions: (
+        inputs: Some([
+            ("fire", 2),
+            ("brown_matter", 8),
+        ]),
+        output: [
+            ("dirt", 4)
+        ],
+    ),
+)

@@ -1,0 +1,15 @@
+(
+    id: "alchemical_cauldron",
+    icon: "alchemical_cauldron",
+    icon_mode: Tile,
+    unlocks: ["alchemical_cauldron"],
+    depends_on: Some("alchemical_assembler"),
+    name: "alchemical_cauldron_name",
+    description: "alchemical_cauldron_desc",
+    completed_description: "alchemical_cauldron_done",
+    required_items: Some([
+        ("alchemical_assembly", 1),
+        ("air", 8),
+    ]),
+    attached_puzzle: None,
+)

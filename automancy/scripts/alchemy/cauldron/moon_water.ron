@@ -1,0 +1,12 @@
+(
+    id: "alchemical_cauldron/moon_water",
+    instructions: (
+        inputs: Some([
+            ("water", 128),
+            ("white_matter", 2048),
+        ]),
+        output: [
+            ("moon_water", 32),
+        ],
+    ),
+)

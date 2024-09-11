@@ -1,0 +1,9 @@
+(
+    id: "alchemical_collector/black_matter",
+    instructions: (
+        inputs: None,
+        output: [
+            ("black_matter", 32),
+        ],
+    ),
+)

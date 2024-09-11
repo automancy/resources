@@ -1,0 +1,14 @@
+(
+    id: "alchemical_assembler/leucose_stone",
+    instructions: (
+        inputs: Some([
+            ("melanose_stone", 1),
+            ("moon_water", 512),
+            ("sun_stone", 512),
+            ("mercury", 128),
+        ]),
+        output: [
+            ("leucose_stone", 1),
+        ],
+    ),
+)
