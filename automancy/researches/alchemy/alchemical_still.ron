@@ -1,6 +1,6 @@
 (
     id: "alchemical_still",
-    icon: "alchemical_still",
+    icon: "tile/alchemical_still",
     icon_mode: Tile,
     unlocks: ["alchemical_still"],
     depends_on: Some("alchemical_assembler"),

@@ -2,8 +2,8 @@
     id: "alchemical_grinder",
     function: Some("machine"),
     category: Some("alchemy"),
-    model: "tile/alchemical_grinder",
     data: ({
+        "tile_model": Id("tile/alchemical_grinder"),
         "scripts": VecId([
             "alchemical_grinder/gravel",
             "alchemical_grinder/sulfur_dust",

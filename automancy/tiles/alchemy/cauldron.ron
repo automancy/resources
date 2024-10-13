@@ -2,8 +2,8 @@
     id: "alchemical_cauldron",
     function: Some("machine"),
     category: Some("alchemy"),
-    model: "tile/alchemical_cauldron",
     data: ({
+        "tile_model": Id("tile/alchemical_cauldron"),
         "scripts": VecId([
             "alchemical_cauldron/aqua_regia",
             "alchemical_cauldron/gold_powder",

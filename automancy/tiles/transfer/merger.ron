@@ -2,8 +2,8 @@
     id: "merger",
     function: Some("merger"),
     category: Some("transfer"),
-    model: "tile/merger",
     data: ({
+        "tile_model": Id("tile/merger"),
         "core:direction_color": Color("ff4a40"),
         "core:default_tile": Bool(true),
     }),

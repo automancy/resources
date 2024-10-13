@@ -1,6 +1,6 @@
 (
     id: "alchemical_assembler",
-    icon: "alchemical_assembly",
+    icon: "item/alchemical_assembly",
     icon_mode: Item,
     unlocks: ["alchemical_assembler", "master_node", "node"],
     depends_on: Some("basic_compressor"),

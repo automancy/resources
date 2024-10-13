@@ -1,6 +1,6 @@
 (
     id: "alchemy",
     ord: 200000,
-    icon: "alchemical_still",
+    icon: "tile/alchemical_still",
     item: Some("alchemical_assembly"),
 )

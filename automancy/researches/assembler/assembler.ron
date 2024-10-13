@@ -1,6 +1,6 @@
 (
     id: "basic_assembler",
-    icon: "basic_assembler",
+    icon: "tile/basic_assembler",
     icon_mode: Tile,
     unlocks: ["basic_assembler"],
     depends_on: None,

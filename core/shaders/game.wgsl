@@ -8,6 +8,9 @@ struct MatrixData {
     normal_matrix: mat3x3<f32>,
 }
 
+struct AnimationMatrixData {
+    animation_matrix: mat4x4<f32>,
+}
 
 struct WorldMatrixData {
     world_matrix: mat4x4<f32>,
@@ -20,7 +23,11 @@ var<uniform> ubo: Uniform;
 var<storage, read> matrix_data: array<MatrixData>;
 
 @group(0) @binding(2)
+var<storage, read> animation_matrix_data: array<AnimationMatrixData>;
+
+@group(0) @binding(3)
 var<storage, read> world_matrix_data: array<WorldMatrixData>;
+
 
 struct VertexInput {
     @location(0) pos: vec3<f32>,
@@ -32,7 +39,8 @@ struct InstanceInput {
     @location(3) color_offset: vec4<f32>,
     @location(4) alpha: f32,
     @location(5) matrix_index: u32,
-    @location(6) world_matrix_index: u32,
+    @location(6) animation_matrix_index: u32,
+    @location(7) world_matrix_index: u32,
 }
 
 struct VertexOutput {
@@ -52,19 +60,29 @@ fn vs_main(
     let m = matrix_data[instance.matrix_index];
     let model_matrix = m.model_matrix;
     let normal_matrix = m.normal_matrix;
-    let world_matrix = world_matrix_data[instance.world_matrix_index].world_matrix;
 
-    let model_pos = model_matrix * vec4(in.pos, 1.0);
+    let wm = world_matrix_data[instance.world_matrix_index];
+    let world_matrix = wm.world_matrix;
+
+    let am = animation_matrix_data[instance.animation_matrix_index];
+    let animation_matrix = am.animation_matrix;
+    let animation_normal_matrix = mat3x3(
+        animation_matrix.x.xyz,
+        animation_matrix.y.xyz,
+        animation_matrix.z.xyz,
+    );
+
+    let model_pos = model_matrix * animation_matrix * vec4(in.pos, 1.0);
 
     out.model_pos = model_pos.xyz / model_pos.w;
     out.pos = world_matrix * model_pos;
-    out.normal = normalize(normal_matrix * in.normal);
+    out.normal = normalize(normal_matrix * animation_normal_matrix * in.normal);
 
     out.color = vec4(mix(instance.color_offset.rgb, in.color.rgb, in.color.a - instance.color_offset.a), instance.alpha * in.color.a);
 
     return out;
 }
- 
+
 struct FragmentOutput {
     @location(0) color: vec4<f32>,
     @location(1) normal: vec4<f32>,

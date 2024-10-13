@@ -2,8 +2,8 @@
     id: "basic_furnace",
     function: Some("machine"),
     category: Some("basic_processor"),
-    model: "tile/basic_furnace",
     data: ({
+        "tile_model": Id("tile/basic_furnace"),
         "scripts": VecId([
             "basic_furnace/brown",
             "basic_furnace/gray",

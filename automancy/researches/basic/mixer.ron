@@ -1,6 +1,6 @@
 (
     id: "basic_mixer",
-    icon: "basic_mixer",
+    icon: "tile/basic_mixer",
     icon_mode: Tile,
     unlocks: ["basic_mixer"],
     depends_on: Some("basic_sorter"),

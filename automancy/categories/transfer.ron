@@ -1,6 +1,6 @@
 (
     id: "transfer",
     ord: -1000,
-    icon: "basic_sorter",
+    icon: "tile/basic_sorter",
     item: Some("network_assembly"),
 )

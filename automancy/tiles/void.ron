@@ -2,8 +2,8 @@
     id: "void",
     function: Some("void"),
     category: Some("utility"),
-    model: "tile/void",
     data: ({
+        "tile_model": Id("tile/void"),
         "core:default_tile": Bool(true),
     }),
 )

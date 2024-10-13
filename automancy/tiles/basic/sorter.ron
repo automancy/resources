@@ -2,8 +2,8 @@
     id: "basic_sorter",
     function: Some("basic_sorter"),
     category: Some("transfer"),
-    model: "tile/basic_sorter",
     data: ({
+        "tile_model": Id("tile/basic_sorter"),
         "core:direction_color": Color("98ffa0"),
         "item_type": Id("core:#any"),
     }),

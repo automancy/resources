@@ -2,8 +2,8 @@
     id: "basic_mixer",
     function: Some("machine"),
     category: Some("basic_processor"),
-    model: "tile/basic_mixer",
     data: ({
+        "tile_model": Id("tile/basic_mixer"),
         "scripts": VecId([
             "basic_mixer/purple_goo",
             "basic_mixer/lime_goo",

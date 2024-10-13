@@ -2,7 +2,7 @@
     id: "node",
     function: Some("node"),
     category: Some("network"),
-    model: "tile/node",
     data: ({
+        "tile_model": Id("tile/node"),
     }),
 )

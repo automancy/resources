@@ -2,8 +2,8 @@
     id: "splitter_right",
     function: Some("splitter_right"),
     category: Some("transfer"),
-    model: "tile/splitter_right",
     data: ({
+        "tile_model": Id("tile/splitter_right"),
         "core:default_tile": Bool(true),
     }),
 )

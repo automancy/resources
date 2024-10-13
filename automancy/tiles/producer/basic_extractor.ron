@@ -2,8 +2,8 @@
     id: "basic_extractor",
     function: Some("machine"),
     category: Some("producer"),
-    model: "tile/basic_extractor",
     data: ({
+        "tile_model": Id("tile/basic_extractor"),
         "scripts": VecId([
             "basic_extractor/white_matter",
         ]),

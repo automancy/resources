@@ -1,5 +1,5 @@
 (
     id: "basic_processor",
     ord: 100000,
-    icon: "basic_prism",
+    icon: "tile/basic_prism",
 )

@@ -1,6 +1,6 @@
 (
     id: "alchemical_sieve",
-    icon: "alchemical_sieve",
+    icon: "tile/alchemical_sieve",
     icon_mode: Tile,
     unlocks: ["alchemical_sieve"],
     depends_on: Some("alchemical_assembler"),

@@ -1,6 +1,6 @@
 (
     id: "alchemical_collector",
-    icon: "alchemical_collector",
+    icon: "tile/alchemical_collector",
     icon_mode: Tile,
     unlocks: ["alchemical_collector"],
     depends_on: Some("alchemical_cauldron"),
