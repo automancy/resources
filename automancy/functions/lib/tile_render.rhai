@@ -20,21 +20,26 @@ fn make_matrix(coord, direction) {
 
 fn simple_tile_render(input, direction, direction_id) {
     let commands = [];
+    let model = input.setup[TILE_MODEL];
+    if (model == ()) {
+        model = MISSING_MODEL;
+    }
+    
 
     if (input.unloading) {
-        commands += Render::Untrack(TILE_TAG, input.setup[TILE_MODEL]);
-        //commands += Render::Untrack(Instance(DIRECTION_TAG, input.setup[TILE_MODEL]);
+        commands += Render::Untrack(TILE_TAG, model);
+        //commands += Render::Untrack(DIRECTION_TAG, input.setup[TILE_MODEL]);
 
         return commands;
     }
 
     if (input.loading) {
-        commands += Render::Track(TILE_TAG, input.setup[TILE_MODEL]);
-        //commands += Render::Track(Instance(DIRECTION_TAG, input.setup[TILE_MODEL]);
+        commands += Render::Track(TILE_TAG, model);
+        //commands += Render::Track(DIRECTION_TAG, input.setup[TILE_MODEL]);
         
         let m = make_matrix(input.coord, direction);
 
-        commands += Render::Transform(TILE_TAG, input.setup[TILE_MODEL], m);
+        commands += Render::Transform(TILE_TAG, model, m);
     }
 
 
@@ -43,7 +48,7 @@ fn simple_tile_render(input, direction, direction_id) {
     ) {
         let m = make_matrix(input.coord, direction);
 
-        commands += Render::Transform(TILE_TAG, input.setup[TILE_MODEL], m);
+        commands += Render::Transform(TILE_TAG, model, m);
     }
 
     return commands;

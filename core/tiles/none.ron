@@ -1,6 +1,6 @@
 (
     id: "none",
-    function: None,
+    function: Some("none"),
     data: ({
         "tile_model": Id("tile/none"),
         "core:default_tile": Bool(true),
