@@ -25,7 +25,6 @@ fn simple_tile_render(input, direction, direction_id) {
         model = MISSING_MODEL;
     }
     
-
     if (input.unloading) {
         commands += Render::Untrack(TILE_TAG, model);
         //commands += Render::Untrack(DIRECTION_TAG, input.setup[TILE_MODEL]);
