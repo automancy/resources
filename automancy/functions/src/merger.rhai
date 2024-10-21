@@ -8,6 +8,12 @@ fn function_id() {
     "merger"
 }
 
+fn render_listening_to_fields() {
+    [
+        DIRECTION
+    ]
+}
+
 fn tile_render(input) {
     lib::automancy::tile_render::simple_tile_render(input, this[DIRECTION], DIRECTION);
 }

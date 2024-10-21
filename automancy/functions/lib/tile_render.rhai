@@ -27,14 +27,12 @@ fn simple_tile_render(input, direction, direction_id) {
     
     if (input.unloading) {
         commands += Render::Untrack(TILE_TAG, model);
-        //commands += Render::Untrack(DIRECTION_TAG, input.setup[TILE_MODEL]);
 
         return commands;
     }
 
     if (input.loading) {
         commands += Render::Track(TILE_TAG, model);
-        //commands += Render::Track(DIRECTION_TAG, input.setup[TILE_MODEL]);
         
         let m = make_matrix(input.coord, direction);
 
