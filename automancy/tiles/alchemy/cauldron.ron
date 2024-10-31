@@ -4,6 +4,7 @@
     category: Some("alchemy"),
     data: ({
         "tile_model": Id("tile/alchemical_cauldron"),
+        "base_model": Id("tile/base/crafting"),
         "scripts": VecId([
             "alchemical_cauldron/aqua_regia",
             "alchemical_cauldron/gold_powder",

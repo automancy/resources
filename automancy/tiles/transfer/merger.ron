@@ -4,6 +4,7 @@
     category: Some("transfer"),
     data: ({
         "tile_model": Id("tile/merger"),
+        "base_model": Id("tile/base/transfer"),
         "core:direction_color": Color("ff4a40"),
         "core:default_tile": Bool(true),
     }),

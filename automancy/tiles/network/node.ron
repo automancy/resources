@@ -4,5 +4,6 @@
     category: Some("network"),
     data: ({
         "tile_model": Id("tile/node"),
+        "base_model": Id("tile/base/network"),
     }),
 )

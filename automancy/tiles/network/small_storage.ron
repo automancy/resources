@@ -4,6 +4,7 @@
     category: Some("network"),
     data: ({
         "tile_model": Id("tile/small_storage"),
+        "base_model": Id("tile/base/network"),
         "core:default_tile": Bool(true),
         "item_type": Id("core:#any"),
     }),

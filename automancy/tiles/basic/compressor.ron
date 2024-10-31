@@ -4,6 +4,7 @@
     category: Some("basic_processor"),
     data: ({
         "tile_model": Id("tile/basic_compressor"),
+        "base_model": Id("tile/base/crafting"),
         "scripts": VecId([
             "basic_compressor/fire",
             "basic_compressor/water",

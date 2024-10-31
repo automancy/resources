@@ -1,5 +1,6 @@
 (
     id: "utility",
     ord: 0,
-    icon: "tile/void",
+    icon: "void",
+    icon_mode: Tile,
 )

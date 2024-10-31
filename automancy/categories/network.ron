@@ -1,6 +1,7 @@
 (
     id: "network",
     ord: -1000000,
-    icon: "tile/master_node",
+    icon: "master_node",
+    icon_mode: Tile,
     item: Some("network_assembly"),
 )

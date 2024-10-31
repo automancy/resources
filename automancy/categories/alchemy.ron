@@ -1,6 +1,7 @@
 (
     id: "alchemy",
     ord: 200000,
-    icon: "tile/alchemical_still",
+    icon: "alchemical_still",
+    icon_mode: Tile,
     item: Some("alchemical_assembly"),
 )

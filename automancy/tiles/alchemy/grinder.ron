@@ -4,6 +4,7 @@
     category: Some("alchemy"),
     data: ({
         "tile_model": Id("tile/alchemical_grinder"),
+        "base_model": Id("tile/base/crafting"),
         "scripts": VecId([
             "alchemical_grinder/gravel",
             "alchemical_grinder/sulfur_dust",

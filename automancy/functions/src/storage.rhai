@@ -18,7 +18,7 @@ fn function_id() {
 }
 
 fn tile_render(input) {
-    lib::automancy::tile_render::simple_tile_render(input);
+    lib::automancy::tile_render::simple_tile_render(input)
 }
 
 fn handle_transaction(input) {

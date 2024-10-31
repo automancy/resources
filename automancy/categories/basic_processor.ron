@@ -1,5 +1,6 @@
 (
     id: "basic_processor",
     ord: 100000,
-    icon: "tile/basic_prism",
+    icon: "basic_prism",
+    icon_mode: Tile,
 )

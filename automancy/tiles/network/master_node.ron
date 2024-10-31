@@ -4,6 +4,7 @@
     category: Some("network"),
     data: ({
         "tile_model": Id("tile/master_node"),
+        "base_model": Id("tile/base/network"),
         "core:direction_color": Color("ff955e"),
     }),
 )

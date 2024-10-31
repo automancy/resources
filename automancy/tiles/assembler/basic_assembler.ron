@@ -4,6 +4,7 @@
     category: Some("assembler"),
     data: ({
         "tile_model": Id("tile/basic_assembler"),
+        "base_model": Id("tile/base/crafting"),
         "scripts": VecId([
             "basic_assembler/white_mechwork",
             "basic_assembler/network_assembly",

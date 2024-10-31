@@ -4,6 +4,7 @@
     category: Some("producer"),
     data: ({
         "tile_model": Id("tile/basic_extractor"),
+        "base_model": Id("tile/base/producer"),
         "scripts": VecId([
             "basic_extractor/white_matter",
         ]),
