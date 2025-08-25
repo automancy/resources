@@ -67,9 +67,9 @@ fn vs_main(
     let am = animation_matrix_data[instance.animation_matrix_index];
     let animation_matrix = am.animation_matrix;
     let animation_normal_matrix = mat3x3(
-        animation_matrix.x.xyz,
-        animation_matrix.y.xyz,
-        animation_matrix.z.xyz,
+        animation_matrix[0].xyz,
+        animation_matrix[1].xyz,
+        animation_matrix[2].xyz,
     );
 
     let model_pos = model_matrix * animation_matrix * vec4(in.pos, 1.0);

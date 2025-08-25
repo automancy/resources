@@ -1,7 +1,7 @@
 (
     id: "splitter_left",
-    function: Some("splitter_left"),
-    category: Some("transfer"),
+    script: "splitter_left",
+    category: "transfer",
     data: ({
         "tile_model": Id("tile/splitter_left"),
         "base_model": Id("tile/base/transfer"),

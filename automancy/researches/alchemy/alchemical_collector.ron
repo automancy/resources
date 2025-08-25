@@ -3,14 +3,14 @@
     icon: "tile/alchemical_collector",
     icon_mode: Tile,
     unlocks: ["alchemical_collector"],
-    depends_on: Some("alchemical_cauldron"),
+    depends_on: "alchemical_cauldron",
     name: "alchemical_collector_name",
     description: "alchemical_collector_desc",
     completed_description: "alchemical_collector_done",
-    required_items: Some([
+    required_items: [
         ("alchemical_assembly", 16),
         ("white_matter", 8192),
-    ]),
+    ],
     attached_puzzle: Some(("puzzles/connection_puzzle", ({
         "anchors": TileMapOffsetCoord([
             ((0, 0), "item/gray_matter"),

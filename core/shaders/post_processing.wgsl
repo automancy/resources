@@ -11,7 +11,7 @@ var normal_texture: texture_2d<f32>;
 @group(0) @binding(5)
 var model_depth_texture: texture_2d<f32>;
 
-const FLAG_SCREEN_EFFECT: u32 = 1;
+const FLAG_SCREEN_EFFECT: u32 = 1u;
 
 struct Uniform {
     flags: vec4<u32>,
@@ -108,7 +108,7 @@ fn fs_main(in: VertexOutput) -> @location(0) vec4<f32> {
 
     let color = textureSample(frame_texture, filtering_sampler, in.uv);
 
-    let screen_effect_enabled = f32((ubo.flags.x & FLAG_SCREEN_EFFECT) != 0);
+    let screen_effect_enabled = f32((ubo.flags.x & FLAG_SCREEN_EFFECT) != 0u);
 
     let edge_darken = (1.0 - screen_effect_enabled) + screen_effect_enabled * smoothstep(0.0, 1.0, (1.0 - distance)) * 0.5;
     let chroma_abbr = screen_effect_enabled * vec4(

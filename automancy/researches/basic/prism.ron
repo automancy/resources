@@ -3,14 +3,14 @@
     icon: "tile/basic_prism",
     icon_mode: Tile,
     unlocks: ["basic_prism"],
-    depends_on: Some("basic_assembler"),
+    depends_on: "basic_assembler",
     name: "basic_prism_name",
     description: "basic_prism_desc",
     completed_description: "basic_prism_done",
-    required_items: Some([
+    required_items: [
         ("white_mechwork", 16),
-    ]),
-    attached_puzzle: Some(("puzzles/connection_puzzle", ({
+    ],
+    attached_puzzle: ("puzzles/connection_puzzle", ({
         "anchors": TileMapOffsetCoord([
             ((0, 0), "item/red_matter"),
             ((0, 2), "item/green_matter"),
@@ -24,10 +24,10 @@
         ]),
         "connections": MapSetId([
             ("item/white_matter", [
-                "item/red_matter", 
-                "item/green_matter", 
+                "item/red_matter",
+                "item/green_matter",
                 "item/blue_matter"
             ]),
         ])
-    }))),
+    })),
 )

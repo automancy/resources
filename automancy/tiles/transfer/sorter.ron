@@ -1,7 +1,7 @@
 (
     id: "basic_sorter",
-    function: Some("basic_sorter"),
-    category: Some("transfer"),
+    script: "basic_sorter",
+    category: "transfer",
     data: ({
         "tile_model": Id("tile/basic_sorter"),
         "base_model": Id("tile/base/transfer"),

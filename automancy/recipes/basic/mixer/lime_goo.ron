@@ -1,0 +1,10 @@
+(
+    id: "basic_mixer/lime_goo",
+    inputs: [
+        ("blue_matter", 8),
+        ("green_matter", 8),
+    ],
+    output: [
+        ("lime_goo", 8),
+    ],
+)
