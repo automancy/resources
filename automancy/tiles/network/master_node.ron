@@ -1,10 +1,10 @@
 (
     id: "master_node",
-    function: Some("master_node"),
-    category: Some("network"),
-    data: ({
+    script: "master_node",
+    category: "network",
+    data: {
         "tile_model": Id("tile/master_node"),
         "base_model": Id("tile/base/network"),
         "core:direction_color": Color("ff955e"),
-    }),
+    },
 )

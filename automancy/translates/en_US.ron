@@ -63,7 +63,7 @@
         "alchemical_still": "Alchemical Still",
         "alchemical_grinder": "Alchemical Grinder",
     },
-    scripts: {
+    recipes: {
         "basic_extractor/white_matter": "White Matter",
         "basic_prism/white": "Split White",
         "basic_compressor/air": "Compress -> Aer",
@@ -175,16 +175,16 @@ Once again, thank you very much for playing so far! 💜",
         "options_controls": "Controls",
 
         "tip_inventory": "Click on the items in the inventory to collect them into your own!",
-        "tip_script": "A Script is like a 'recipe' for the Tile to operate on, it specifies what the Tile consumes and what it produces.",
+        "tip_recipe": "A recipe specifies what the Tile consumes and what it produces.",
         "tip_direction": "Which direction the Tile is facing. This means a Connection to another tile, whether it be an 'extraction' source or an 'output' destination.",
         "tip_linkage": "Click on the button to start Linking, and then right click a Tile to link to one (of many) Destination.",
 
         "tip_search": "Filter with name...",
-        "tip_search_script": "Filter with Script name...",
+        "tip_search_recipe": "Filter with Recipe name...",
         "tip_search_item": "Filter with Item name...",
 
         "tile_config_inventory": "Inventory:",
-        "tile_config_script": "Script:",
+        "tile_config_recipe": "Recipe:",
         "tile_config_direction": "Direction:",
         "tile_config_linkage": "Linkage:",
         "tile_config_item_type": "Item Type:",
