@@ -1,0 +1,10 @@
+(
+    id: "basic_compressor/earth",
+    inputs: [
+        ("gray_matter", 8),
+        ("brown_matter", 4),
+    ],
+    output: [
+        ("earth", 4),
+    ],
+)

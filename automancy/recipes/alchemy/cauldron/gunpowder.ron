@@ -1,0 +1,12 @@
+(
+    id: "alchemical_cauldron/gunpowder",
+    inputs: [
+        ("water", 2),
+        ("niter_dust", 112),
+        ("sulfur_dust", 128),
+        ("coal_dust", 128),
+    ],
+    output: [
+        ("gunpowder", 128),
+    ],
+)

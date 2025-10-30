@@ -3,5 +3,5 @@
     ord: 200000,
     icon: "alchemical_still",
     icon_mode: Tile,
-    item: Some("alchemical_assembly"),
+    item: "alchemical_assembly",
 )

@@ -1,0 +1,7 @@
+(
+    id: "alchemical_collector/black_matter",
+    inputs: None,
+    output: [
+        ("black_matter", 32),
+    ],
+)
