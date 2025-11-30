@@ -1,0 +1,13 @@
+(
+    id: "basic_assembler/alchemical_assembly",
+    inputs: [
+        ("white_mechwork", 4),
+        ("fire", 16),
+        ("water", 16),
+        ("earth", 16),
+        ("air", 16),
+    ],
+    output: [
+        ("alchemical_assembly", 1),
+    ],
+)

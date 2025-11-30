@@ -1,15 +1,15 @@
 (
     id: "basic_compressor",
-    function: Some("machine"),
-    category: Some("basic_processor"),
-    data: ({
+    script: "machine",
+    category: "basic_processor",
+    data: {
         "tile_model": Id("tile/basic_compressor"),
         "base_model": Id("tile/base/crafting"),
-        "scripts": VecId([
+        "recipes": IdList([
             "basic_compressor/fire",
             "basic_compressor/water",
             "basic_compressor/air",
             "basic_compressor/earth",
         ]),
-    }),
+    },
 )

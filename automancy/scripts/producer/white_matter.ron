@@ -1,9 +1,0 @@
-(
-    id: "basic_extractor/white_matter",
-    instructions: (
-        inputs: None,
-        output: [
-            ("white_matter", 32),
-        ],
-    ),
-)

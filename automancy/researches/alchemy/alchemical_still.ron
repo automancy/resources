@@ -1,15 +1,15 @@
 (
     id: "alchemical_still",
-    icon: "tile/alchemical_still",
-    icon_mode: Tile,
+    icon: Tile("alchemical_still"),
     unlocks: ["alchemical_still"],
-    depends_on: Some("alchemical_assembler"),
+    depends_on: "alchemical_assembler",
     name: "alchemical_still_name",
     description: "alchemical_still_desc",
     completed_description: "alchemical_still_done",
-    required_items: Some([
+
+    required_items: [
         ("alchemical_assembly", 1),
         ("fire", 8),
-    ]),
+    ],
     attached_puzzle: None,
 )

@@ -1,10 +1,10 @@
 (
     id: "splitter_right",
-    function: Some("splitter_right"),
-    category: Some("transfer"),
-    data: ({
+    script: "splitter_right",
+    category: "transfer",
+    data: {
         "tile_model": Id("tile/splitter_right"),
         "base_model": Id("tile/base/transfer"),
         "core:default_tile": Bool(true),
-    }),
+    },
 )

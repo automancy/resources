@@ -1,0 +1,9 @@
+(
+    id: "basic_compressor/air",
+    inputs: [
+        ("gray_matter", 20),
+    ],
+    output: [
+        ("air", 4),
+    ],
+)

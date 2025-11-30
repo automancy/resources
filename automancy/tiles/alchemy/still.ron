@@ -1,14 +1,14 @@
 (
     id: "alchemical_still",
-    function: Some("machine"),
-    category: Some("alchemy"),
-    data: ({
+    script: "machine",
+    category: "alchemy",
+    data: {
         "tile_model": Id("tile/alchemical_still"),
         "base_model": Id("tile/base/crafting"),
-        "scripts": VecId([
+        "recipes": IdList([
             "alchemical_still/aqua_fortis",
             "alchemical_still/dirt",
             "alchemical_still/tar",
         ]),
-    }),
+    },
 )

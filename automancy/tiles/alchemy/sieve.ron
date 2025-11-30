@@ -1,12 +1,12 @@
 (
     id: "alchemical_sieve",
-    function: Some("machine"),
-    category: Some("alchemy"),
-    data: ({
+    script: "machine",
+    category: "alchemy",
+    data: {
         "tile_model": Id("tile/alchemical_sieve"),
         "base_model": Id("tile/base/crafting"),
-        "scripts": VecId([
+        "recipes": IdList([
             "alchemical_sieve/gravel",
         ]),
-    }),
+    },
 )

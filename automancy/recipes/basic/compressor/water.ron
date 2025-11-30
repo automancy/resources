@@ -1,0 +1,10 @@
+(
+    id: "basic_compressor/water",
+    inputs: [
+        ("gray_matter", 4),
+        ("blue_matter", 16),
+    ],
+    output: [
+        ("water", 4),
+    ],
+)

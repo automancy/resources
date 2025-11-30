@@ -1,11 +1,11 @@
 (
     id: "merger",
-    function: Some("merger"),
-    category: Some("transfer"),
-    data: ({
+    script: "merger",
+    category: "transfer",
+    data: {
         "tile_model": Id("tile/merger"),
         "base_model": Id("tile/base/transfer"),
         "core:direction_color": Color("ff4a40"),
         "core:default_tile": Bool(true),
-    }),
+    },
 )

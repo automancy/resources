@@ -1,15 +1,15 @@
 (
     id: "alchemical_cauldron",
-    function: Some("machine"),
-    category: Some("alchemy"),
-    data: ({
+    script: "machine",
+    category: "alchemy",
+    data: {
         "tile_model": Id("tile/alchemical_cauldron"),
         "base_model": Id("tile/base/crafting"),
-        "scripts": VecId([
+        "recipes": IdList([
             "alchemical_cauldron/aqua_regia",
             "alchemical_cauldron/gold_powder",
             "alchemical_cauldron/gunpowder",
             "alchemical_cauldron/moon_water",
         ]),
-    }),
+    },
 )

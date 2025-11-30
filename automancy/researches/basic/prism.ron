@@ -1,33 +1,35 @@
 (
     id: "basic_prism",
-    icon: "tile/basic_prism",
-    icon_mode: Tile,
+    icon: Tile("basic_prism"),
     unlocks: ["basic_prism"],
-    depends_on: Some("basic_assembler"),
+    depends_on: "basic_assembler",
     name: "basic_prism_name",
     description: "basic_prism_desc",
     completed_description: "basic_prism_done",
-    required_items: Some([
+
+    required_items: [
         ("white_mechwork", 16),
-    ]),
-    attached_puzzle: Some(("puzzles/connection_puzzle", ({
-        "anchors": TileMapOffsetCoord([
-            ((0, 0), "item/red_matter"),
-            ((0, 2), "item/green_matter"),
-            ((2, 1), "item/blue_matter")
-        ]),
-        "selections": VecId([
-            "item/red_matter",
-            "item/green_matter",
-            "item/blue_matter",
-            "item/white_matter",
-        ]),
-        "connections": MapSetId([
-            ("item/white_matter", [
-                "item/red_matter", 
-                "item/green_matter", 
-                "item/blue_matter"
+    ],
+    attached_puzzle: (
+        "puzzles/connection_puzzle", {
+            "anchors": ModelIdGridXY([
+                ((0, 0), "item/red_matter"),
+                ((0, 2), "item/green_matter"),
+                ((2, 1), "item/blue_matter")
             ]),
-        ])
-    }))),
+            "selections": IdList([
+                "item/red_matter",
+                "item/green_matter",
+                "item/blue_matter",
+                "item/white_matter",
+            ]),
+            "connections": IdSetMap([
+                ("item/white_matter", [
+                    "item/red_matter",
+                    "item/green_matter",
+                    "item/blue_matter"
+                ]),
+            ])
+        }
+    ),
 )

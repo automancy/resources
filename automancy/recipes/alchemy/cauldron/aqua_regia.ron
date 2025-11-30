@@ -1,0 +1,11 @@
+(
+    id: "alchemical_cauldron/aqua_regia",
+    inputs: [
+        ("water", 2),
+        ("sal_ammoniac", 64),
+        ("aqua_fortis", 64),
+    ],
+    output: [
+        ("aqua_regia", 128),
+    ],
+)

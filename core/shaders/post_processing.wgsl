@@ -1,24 +1,26 @@
-@group(0) @binding(0)
-var filtering_sampler: sampler;
-@group(0) @binding(1)
-var nonfiltering_sampler: sampler;
-@group(0) @binding(2)
-var repeating_sampler: sampler;
-@group(0) @binding(3)
-var frame_texture: texture_2d<f32>;
-@group(0) @binding(4)
-var normal_texture: texture_2d<f32>;
-@group(0) @binding(5)
-var model_depth_texture: texture_2d<f32>;
-
-const FLAG_SCREEN_EFFECT: u32 = 1;
-
+const FLAG_SCREEN_EFFECT: u32 = 1u;
 struct Uniform {
     flags: vec4<u32>,
 }
 
-@group(1) @binding(0)
+@group(0) @binding(0)
 var<uniform> ubo: Uniform;
+
+@group(1) @binding(0)
+var filtering_sampler: sampler;
+@group(1) @binding(1)
+var nonfiltering_sampler: sampler;
+@group(1) @binding(2)
+var repeating_sampler: sampler;
+
+@group(2) @binding(0)
+var frame_texture: texture_2d<f32>;
+@group(2) @binding(1)
+var albedo_texture: texture_2d<f32>;
+@group(2) @binding(2)
+var normal_texture: texture_2d<f32>;
+@group(2) @binding(3)
+var model_pos_texture: texture_2d<f32>;
 
 struct VertexInput {
     @builtin(vertex_index) idx: u32,
@@ -47,19 +49,19 @@ fn vs_main(
 }
 
 fn depth_edge(uv: vec2<f32>) -> vec3<f32> {
-    let texture_dim = vec2<f32>(textureDimensions(model_depth_texture));
+    let texture_dim = vec2<f32>(textureDimensions(model_pos_texture));
     let texel_size = 1.0 / texture_dim;
 
-    let  c = textureSample(model_depth_texture, nonfiltering_sampler, uv).x;
-    let  n = textureSample(model_depth_texture, nonfiltering_sampler, uv + texel_size * vec2<f32>(-1.0, 0.0)).x;
-    let  s = textureSample(model_depth_texture, nonfiltering_sampler, uv + texel_size * vec2<f32>(1.0, 0.0)).x;
-    let  w = textureSample(model_depth_texture, nonfiltering_sampler, uv + texel_size * vec2<f32>(0.0, -1.0)).x;
-    let  e = textureSample(model_depth_texture, nonfiltering_sampler, uv + texel_size * vec2<f32>(0.0, 1.0)).x;
+    let  c = textureSample(model_pos_texture, nonfiltering_sampler, uv).z;
+    let  n = textureSample(model_pos_texture, nonfiltering_sampler, uv + texel_size * vec2<f32>(-1.0, 0.0)).z;
+    let  s = textureSample(model_pos_texture, nonfiltering_sampler, uv + texel_size * vec2<f32>(1.0, 0.0)).z;
+    let  w = textureSample(model_pos_texture, nonfiltering_sampler, uv + texel_size * vec2<f32>(0.0, -1.0)).z;
+    let  e = textureSample(model_pos_texture, nonfiltering_sampler, uv + texel_size * vec2<f32>(0.0, 1.0)).z;
 
-    let nw = textureSample(model_depth_texture, nonfiltering_sampler, uv + texel_size * vec2<f32>(-1.0, -1.0)).x;
-    let ne = textureSample(model_depth_texture, nonfiltering_sampler, uv + texel_size * vec2<f32>(-1.0, 1.0)).x;
-    let sw = textureSample(model_depth_texture, nonfiltering_sampler, uv + texel_size * vec2<f32>(1.0, -1.0)).x;
-    let se = textureSample(model_depth_texture, nonfiltering_sampler, uv + texel_size * vec2<f32>(1.0, 1.0)).x;
+    let nw = textureSample(model_pos_texture, nonfiltering_sampler, uv + texel_size * vec2<f32>(-1.0, -1.0)).z;
+    let ne = textureSample(model_pos_texture, nonfiltering_sampler, uv + texel_size * vec2<f32>(-1.0, 1.0)).z;
+    let sw = textureSample(model_pos_texture, nonfiltering_sampler, uv + texel_size * vec2<f32>(1.0, -1.0)).z;
+    let se = textureSample(model_pos_texture, nonfiltering_sampler, uv + texel_size * vec2<f32>(1.0, 1.0)).z;
 
     let edges = (abs(n - c) + abs(s - c) + abs(w - c) + abs(e - c)) / 4.0;
     let diags = (abs(nw - c) + abs(ne - c) + abs(sw - c) + abs(se - c)) / 4.0;
@@ -107,16 +109,21 @@ fn fs_main(in: VertexOutput) -> @location(0) vec4<f32> {
     let offset_strength = 0.005 * smoothstep(0.0, 1.0, distance);
 
     let color = textureSample(frame_texture, filtering_sampler, in.uv);
+    let edge_effect = depth_edge(in.uv) * normal_edge(in.uv);
 
-    let screen_effect_enabled = f32((ubo.flags.x & FLAG_SCREEN_EFFECT) != 0);
+    let screen_effect_enabled = (ubo.flags.x & FLAG_SCREEN_EFFECT) != 0u;
+    if screen_effect_enabled {
+        let edge_darken = smoothstep(0.0, 1.0, (1.0 - distance)) * 0.5;
+        let chroma_abbr = vec4(
+            textureSample(frame_texture, filtering_sampler, in.uv + vec2<f32>(offset_strength, -offset_strength)).r,
+            textureSample(frame_texture, filtering_sampler, in.uv + vec2<f32>(-offset_strength, 0.0)).g,
+            textureSample(frame_texture, filtering_sampler, in.uv + vec2<f32>(0.0, offset_strength)).b,
+            0.0
+        );
 
-    let edge_darken = (1.0 - screen_effect_enabled) + screen_effect_enabled * smoothstep(0.0, 1.0, (1.0 - distance)) * 0.5;
-    let chroma_abbr = screen_effect_enabled * vec4(
-        textureSample(frame_texture, filtering_sampler, in.uv + vec2<f32>(offset_strength, -offset_strength)).r,
-        textureSample(frame_texture, filtering_sampler, in.uv + vec2<f32>(-offset_strength, 0.0)).g,
-        textureSample(frame_texture, filtering_sampler, in.uv + vec2<f32>(0.0, offset_strength)).b,
-        0.0
-    );
+        return (color + chroma_abbr) * vec4(vec3(edge_darken), 1.0);
+    } else {
+        return color * vec4(edge_effect, 1.0);
+    }
 
-    return (color + chroma_abbr) * vec4(vec3(edge_darken) * depth_edge(in.uv) * normal_edge(in.uv), 1.0);
 }

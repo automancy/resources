@@ -1,14 +1,14 @@
 (
     id: "basic_furnace",
-    icon: "tile/basic_furnace",
-    icon_mode: Tile,
+    icon: Tile("basic_furnace"),
     unlocks: ["basic_furnace"],
-    depends_on: Some("basic_sorter"),
+    depends_on: "basic_sorter",
     name: "basic_furnace_name",
     description: "basic_furnace_desc",
     completed_description: "basic_furnace_done",
-    required_items: Some([
+
+    required_items: [
         ("red_matter", 64),
-    ]),
+    ],
     attached_puzzle: None,
 )

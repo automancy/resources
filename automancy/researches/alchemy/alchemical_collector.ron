@@ -1,29 +1,31 @@
 (
     id: "alchemical_collector",
-    icon: "tile/alchemical_collector",
-    icon_mode: Tile,
+    icon: Tile("alchemical_collector"),
     unlocks: ["alchemical_collector"],
-    depends_on: Some("alchemical_cauldron"),
+    depends_on: "alchemical_cauldron",
     name: "alchemical_collector_name",
     description: "alchemical_collector_desc",
     completed_description: "alchemical_collector_done",
-    required_items: Some([
+
+    required_items: [
         ("alchemical_assembly", 16),
         ("white_matter", 8192),
-    ]),
-    attached_puzzle: Some(("puzzles/connection_puzzle", ({
-        "anchors": TileMapOffsetCoord([
-            ((0, 0), "item/gray_matter"),
-            ((2, 2), "item/black_matter"),
-        ]),
-        "selections": VecId([
-            "item/red_matter",
-            "item/green_matter",
-            "item/blue_matter",
-            "item/white_matter",
-        ]),
-        "connections": MapSetId([
-            ("item/white_matter", ["item/black_matter", "item/gray_matter"]),
-        ])
-    }))),
+    ],
+    attached_puzzle: (
+        "puzzles/connection_puzzle", {
+            "anchors": ModelIdGridXY([
+                ((0, 0), "item/gray_matter"),
+                ((2, 2), "item/black_matter"),
+            ]),
+            "selections": IdList([
+                "item/red_matter",
+                "item/green_matter",
+                "item/blue_matter",
+                "item/white_matter",
+            ]),
+            "connections": IdSetMap([
+                ("item/white_matter", ["item/black_matter", "item/gray_matter"]),
+            ])
+        }
+    ),
 )

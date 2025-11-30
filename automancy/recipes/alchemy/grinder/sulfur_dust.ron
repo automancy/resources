@@ -1,0 +1,10 @@
+(
+    id: "alchemical_grinder/sulfur_dust",
+    inputs: [
+        ("earth", 2),
+        ("coal_dust", 32),
+    ],
+    output: [
+        ("sulfur_dust", 8),
+    ],
+)

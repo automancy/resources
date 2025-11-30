@@ -1,9 +1,9 @@
 (
     id: "node",
-    function: Some("node"),
-    category: Some("network"),
-    data: ({
+    script: "node",
+    category: "network",
+    data: {
         "tile_model": Id("tile/node"),
         "base_model": Id("tile/base/network"),
-    }),
+    },
 )

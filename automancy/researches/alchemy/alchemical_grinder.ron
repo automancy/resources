@@ -1,15 +1,15 @@
 (
     id: "alchemical_grinder",
-    icon: "tile/alchemical_grinder",
-    icon_mode: Tile,
+    icon: Tile("alchemical_grinder"),
     unlocks: ["alchemical_grinder"],
-    depends_on: Some("alchemical_assembler"),
+    depends_on: "alchemical_assembler",
     name: "alchemical_grinder_name",
     description: "alchemical_grinder_desc",
     completed_description: "alchemical_grinder_done",
-    required_items: Some([
+
+    required_items: [
         ("alchemical_assembly", 1),
         ("earth", 8),
-    ]),
+    ],
     attached_puzzle: None,
 )

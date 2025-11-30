@@ -1,6 +1,5 @@
 (
     id: "assembler",
     ord: 2000,
-    icon: "basic_assembler",
-    icon_mode: Tile,
+    icon: Tile("basic_assembler"),
 )
