@@ -1,0 +1,4 @@
+(
+    id: "gold_scrap",
+    model: "item/gold_scrap",
+)

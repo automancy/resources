@@ -1,0 +1,10 @@
+(
+    id: "basic_mixer/purple_goo",
+    inputs: [
+        ("blue_matter", 8),
+        ("red_matter", 8),
+    ],
+    output: [
+        ("purple_goo", 8),
+    ],
+)

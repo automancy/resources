@@ -1,0 +1,10 @@
+(
+    id: "alchemical_still/tar",
+    inputs: [
+        ("fire", 2),
+        ("coal_dust", 1024),
+    ],
+    output: [
+        ("tar", 128)
+    ],
+)

@@ -1,0 +1,4 @@
+(
+    id: "tile/basic_assembler",
+    file: "assembler.glb",
+)
