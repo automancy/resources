@@ -1,13 +1,13 @@
 (
     id: "basic_extractor",
-    function: Some("machine"),
-    category: Some("producer"),
-    data: ({
+    script: "machine",
+    category: "producer",
+    data: {
         "tile_model": Id("tile/basic_extractor"),
         "base_model": Id("tile/base/producer"),
-        "scripts": VecId([
+        "recipes": IdList([
             "basic_extractor/white_matter",
         ]),
         "core:default_tile": Bool(true),
-    }),
+    },
 )
