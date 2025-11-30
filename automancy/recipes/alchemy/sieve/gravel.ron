@@ -1,0 +1,17 @@
+(
+    id: "alchemical_sieve/gravel",
+    inputs: [
+        ("water", 2),
+        ("gravel", 32),
+    ],
+    output: [
+        ("gold_scrap", 1),
+        ("silver_scrap", 1),
+        ("iron_scrap", 2),
+        ("copper_scrap", 2),
+        ("tin_scrap", 2),
+        ("coal_dust", 2),
+        ("niter_dust", 2),
+        ("salt", 4),
+    ],
+)

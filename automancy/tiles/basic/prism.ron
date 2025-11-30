@@ -1,0 +1,12 @@
+(
+    id: "basic_prism",
+    script: "machine",
+    category: "basic_processor",
+    data: {
+        "tile_model": Id("tile/basic_prism"),
+        "base_model": Id("tile/base/crafting"),
+        "recipes": IdList([
+            "basic_prism/white",
+        ]),
+    },
+)

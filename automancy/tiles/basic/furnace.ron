@@ -1,0 +1,13 @@
+(
+    id: "basic_furnace",
+    script: "machine",
+    category: "basic_processor",
+    data: {
+        "tile_model": Id("tile/basic_furnace"),
+        "base_model": Id("tile/base/crafting"),
+        "recipes": IdList([
+            "basic_furnace/brown",
+            "basic_furnace/gray",
+        ]),
+    },
+)
