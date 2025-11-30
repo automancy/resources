@@ -1,0 +1,9 @@
+(
+    id: "void",
+    script: "void",
+    category: "utility",
+    data: {
+        "tile_model": Id("tile/void"),
+        "core:default_tile": true,
+    },
+)

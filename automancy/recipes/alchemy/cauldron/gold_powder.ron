@@ -1,0 +1,11 @@
+(
+    id: "alchemical_cauldron/gold_powder",
+    inputs: [
+        ("water", 2),
+        ("gold_scrap", 256),
+        ("aqua_regia", 128),
+    ],
+    output: [
+        ("gold_powder", 128),
+    ],
+)

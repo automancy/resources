@@ -1,0 +1,6 @@
+(
+    id: "network",
+    ord: -1000000,
+    icon: Tile("master_node"),
+    item: "network_assembly",
+)

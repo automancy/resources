@@ -1,0 +1,10 @@
+(
+    id: "alchemical_cauldron/moon_water",
+    inputs: [
+        ("water", 128),
+        ("white_matter", 2048),
+    ],
+    output: [
+        ("moon_water", 32),
+    ],
+)

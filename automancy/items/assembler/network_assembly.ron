@@ -1,0 +1,4 @@
+(
+    id: "network_assembly",
+    model: "item/network_assembly",
+)

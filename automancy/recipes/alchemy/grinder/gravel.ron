@@ -1,0 +1,10 @@
+(
+    id: "alchemical_grinder/gravel",
+    inputs: [
+        ("earth", 2),
+        ("dirt", 2),
+    ],
+    output: [
+        ("gravel", 2)
+    ],
+)

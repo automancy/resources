@@ -1,0 +1,14 @@
+(
+    id: "basic_compressor",
+    icon: Tile("basic_compressor"),
+    unlocks: ["basic_compressor"],
+    depends_on: "basic_furnace",
+    name: "basic_compressor_name",
+    description: "basic_compressor_desc",
+    completed_description: "basic_compressor_done",
+
+    required_items: [
+        ("gray_matter", 64),
+    ],
+    attached_puzzle: None,
+)

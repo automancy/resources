@@ -1,0 +1,12 @@
+(
+    id: "basic_assembler/network_assembly",
+    inputs: [
+        ("white_mechwork", 4),
+        ("red_matter", 32),
+        ("green_matter", 32),
+        ("blue_matter", 32),
+    ],
+    output: [
+        ("network_assembly", 1),
+    ],
+)

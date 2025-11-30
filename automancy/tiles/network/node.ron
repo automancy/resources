@@ -1,0 +1,9 @@
+(
+    id: "node",
+    script: "node",
+    category: "network",
+    data: {
+        "tile_model": Id("tile/node"),
+        "base_model": Id("tile/base/network"),
+    },
+)

@@ -1,0 +1,11 @@
+(
+    id: "basic_prism/white",
+    inputs: [
+        ("white_matter", 6),
+    ],
+    output: [
+        ("red_matter", 2),
+        ("green_matter", 2),
+        ("blue_matter", 2),
+    ],
+)

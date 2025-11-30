@@ -1,0 +1,12 @@
+(
+    id: "alchemical_sieve",
+    script: "machine",
+    category: "alchemy",
+    data: {
+        "tile_model": Id("tile/alchemical_sieve"),
+        "base_model": Id("tile/base/crafting"),
+        "recipes": RecipeIdSet([
+            "alchemical_sieve/gravel",
+        ]),
+    },
+)

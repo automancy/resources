@@ -1,0 +1,10 @@
+(
+    id: "alchemical_still/dirt",
+    inputs: [
+        ("fire", 2),
+        ("brown_matter", 8),
+    ],
+    output: [
+        ("dirt", 4)
+    ],
+)

@@ -1,0 +1,10 @@
+(
+    id: "alchemical_grinder/sun_stone",
+    inputs: [
+        ("earth", 128),
+        ("black_matter", 2048),
+    ],
+    output: [
+        ("sun_stone", 32)
+    ],
+)

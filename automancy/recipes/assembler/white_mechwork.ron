@@ -1,0 +1,9 @@
+(
+    id: "basic_assembler/white_mechwork",
+    inputs: [
+        ("white_matter", 8),
+    ],
+    output: [
+        ("white_mechwork", 1),
+    ],
+)

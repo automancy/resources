@@ -1,0 +1,6 @@
+(
+    id: "transfer",
+    ord: -1000,
+    icon: Tile("basic_sorter"),
+    item: "network_assembly",
+)
