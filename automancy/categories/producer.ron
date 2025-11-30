@@ -1,0 +1,5 @@
+(
+    id: "producer",
+    ord: 1000,
+    icon: Tile("basic_extractor"),
+)

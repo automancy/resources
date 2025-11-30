@@ -1,0 +1,4 @@
+(
+    id: "tile/base/network",
+    file: "network.glb",
+)

@@ -1,0 +1,13 @@
+(
+    id: "basic_extractor",
+    script: "machine",
+    category: "producer",
+    data: {
+        "tile_model": Id("tile/basic_extractor"),
+        "base_model": Id("tile/base/producer"),
+        "recipes": RecipeIdSet([
+            "basic_extractor/white_matter",
+        ]),
+        "core:default_tile": true,
+    },
+)
