@@ -1,11 +1,11 @@
 (
     id: "basic_sorter",
-    function: Some("basic_sorter"),
-    category: Some("transfer"),
-    data: ({
+    script: "basic_sorter",
+    category: "transfer",
+    data: {
         "tile_model": Id("tile/basic_sorter"),
         "base_model": Id("tile/base/transfer"),
         "core:direction_color": Color("98ffa0"),
-        "item_type": Id("core:#any"),
-    }),
+        "item_type": Id("any"),
+    },
 )

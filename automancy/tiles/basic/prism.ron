@@ -1,12 +1,12 @@
 (
     id: "basic_prism",
-    function: Some("machine"),
-    category: Some("basic_processor"),
-    data: ({
+    script: "machine",
+    category: "basic_processor",
+    data: {
         "tile_model": Id("tile/basic_prism"),
         "base_model": Id("tile/base/crafting"),
-        "scripts": VecId([
+        "recipes": IdList([
             "basic_prism/white",
         ]),
-    }),
+    },
 )

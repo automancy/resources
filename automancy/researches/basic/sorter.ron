@@ -1,15 +1,15 @@
 (
     id: "basic_sorter",
-    icon: "tile/basic_sorter",
-    icon_mode: Tile,
+    icon: Tile("basic_sorter"),
     unlocks: ["basic_sorter"],
-    depends_on: Some("basic_prism"),
+    depends_on: "basic_prism",
     name: "basic_sorter_name",
     description: "basic_sorter_desc",
     completed_description: "basic_sorter_done",
-    required_items: Some([
+
+    required_items: [
         ("white_matter", 64),
         ("white_mechwork", 32),
-    ]),
+    ],
     attached_puzzle: None,
 )

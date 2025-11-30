@@ -1,0 +1,10 @@
+(
+    id: "basic_compressor/fire",
+    inputs: [
+        ("gray_matter", 4),
+        ("red_matter", 16),
+    ],
+    output: [
+        ("fire", 4),
+    ],
+)

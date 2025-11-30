@@ -1,17 +1,17 @@
 (
     id: "alchemical_assembler",
-    icon: "item/alchemical_assembly",
-    icon_mode: Item,
+    icon: Item("alchemical_assembly"),
     unlocks: ["alchemical_assembler", "master_node", "node"],
-    depends_on: Some("basic_compressor"),
+    depends_on: "basic_compressor",
     name: "alchemical_assembler_name",
     description: "alchemical_assembler_desc",
     completed_description: "alchemical_assembler_done",
-    required_items: Some([
+
+    required_items: [
         ("fire", 128),
         ("water", 128),
         ("earth", 128),
         ("air", 128),
-    ]),
+    ],
     attached_puzzle: None,
 )
