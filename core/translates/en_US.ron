@@ -1,11 +1,11 @@
 (
-    none: Some("<none>"),
-    unnamed: Some("<unnamed, report to the devs>"),
+    none: "<none>",
+    unnamed: "<unnamed, report to the devs>",
     tiles: {
         "none": "None",
     },
     error: {
         "unwritable_options": "Could not write the options.ron file! Your changes will NOT be saved.",
-        "invalid_map_data": "Map {} was corrupted and could not be loaded! Aborting load.",
+        "invalid_map_data": "Map {map_name} was corrupted and could not be loaded!",
     },
 )
