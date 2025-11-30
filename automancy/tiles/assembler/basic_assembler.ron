@@ -1,14 +1,14 @@
 (
     id: "basic_assembler",
-    function: Some("machine"),
-    category: Some("assembler"),
-    data: ({
+    script: "machine",
+    category: "assembler",
+    data: {
         "tile_model": Id("tile/basic_assembler"),
         "base_model": Id("tile/base/crafting"),
-        "scripts": VecId([
+        "recipes": IdList([
             "basic_assembler/white_mechwork",
             "basic_assembler/network_assembly",
             "basic_assembler/alchemical_assembly",
         ]),
-    }),
+    },
 )

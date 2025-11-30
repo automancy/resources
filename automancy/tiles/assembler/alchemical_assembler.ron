@@ -1,12 +1,12 @@
 (
     id: "alchemical_assembler",
-    function: Some("machine"),
-    category: Some("assembler"),
-    data: ({
+    script: "machine",
+    category: "assembler",
+    data: {
         "tile_model": Id("tile/alchemical_assembler"),
         "base_model": Id("tile/base/crafting"),
-        "scripts": VecId([
+        "recipes": IdList([
             "alchemical_assembler/melanose_stone",
         ]),
-    }),
+    },
 )
